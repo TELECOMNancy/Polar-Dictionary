@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Couleur" representedClassName="Couleur" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" attributeType="String" syncable="YES"/>
+        <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plante" inverseName="couleur" inverseEntity="Plante" syncable="YES"/>
+    </entity>
+    <entity name="Lieu" representedClassName="Lieu" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" attributeType="String" syncable="YES"/>
+        <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plante" inverseName="lieu" inverseEntity="Plante" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="Photo" syncable="YES" codeGenerationType="class">
+        <attribute name="data" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="plante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plante" inverseName="photo" inverseEntity="Plante" syncable="YES"/>
+    </entity>
+    <entity name="Plante" representedClassName="Plante" syncable="YES" codeGenerationType="class">
+        <attribute name="description_plante" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="famille" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hauteur_max" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hauteur_min" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lien" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="nom_anglais" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom_francais" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom_latin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre_etamines" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nombre_petales_max" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nombre_petales_min" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nombre_sepales" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="couleur" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Couleur" inverseName="plante" inverseEntity="Couleur" syncable="YES"/>
+        <relationship name="forme_feuilles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plante_Forme_Feuilles" inverseName="plante" inverseEntity="Plante_Forme_Feuilles" syncable="YES"/>
+        <relationship name="lieu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lieu" inverseName="plante" inverseEntity="Lieu" syncable="YES"/>
+        <relationship name="photo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="plante" inverseEntity="Photo" syncable="YES"/>
+        <relationship name="sous_type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plante_Sous_Types" inverseName="plante" inverseEntity="Plante_Sous_Types" syncable="YES"/>
+    </entity>
+    <entity name="Plante_Forme_Feuilles" representedClassName="Plante_Forme_Feuilles" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plante" inverseName="forme_feuilles" inverseEntity="Plante" syncable="YES"/>
+    </entity>
+    <entity name="Plante_Sous_Types" representedClassName="Plante_Sous_Types" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plante" inverseName="sous_type" inverseEntity="Plante" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Plante" positionX="234" positionY="-88" width="128" height="298"/>
+        <element name="Plante_Sous_Types" positionX="450" positionY="179" width="128" height="73"/>
+        <element name="Plante_Forme_Feuilles" positionX="-54" positionY="72" width="128" height="73"/>
+        <element name="Lieu" positionX="450" positionY="81" width="128" height="73"/>
+        <element name="Couleur" positionX="450" positionY="-9" width="128" height="75"/>
+        <element name="Photo" positionX="-54" positionY="159" width="128" height="75"/>
+    </elements>
+</model>
