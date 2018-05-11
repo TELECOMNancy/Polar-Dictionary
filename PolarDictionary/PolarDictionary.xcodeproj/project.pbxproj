@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C42920A43C66006DC7D2 /* AppDelegate.swift */; };
+		F450C42C20A43C66006DC7D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C42B20A43C66006DC7D2 /* ViewController.swift */; };
+		F450C42F20A43C66006DC7D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450C42D20A43C66006DC7D2 /* Main.storyboard */; };
+		F450C43220A43C66006DC7D2 /* PolarDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F450C43020A43C66006DC7D2 /* PolarDictionary.xcdatamodeld */; };
+		F450C43420A43C67006DC7D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F450C43320A43C67006DC7D2 /* Assets.xcassets */; };
+		F450C43720A43C67006DC7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */; };
+		F450C44220A43C67006DC7D2 /* PolarDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C44120A43C67006DC7D2 /* PolarDictionaryTests.swift */; };
+		F450C44D20A43C67006DC7D2 /* PolarDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C44C20A43C67006DC7D2 /* PolarDictionaryUITests.swift */; };
+		F450C45D20A43C8E006DC7D2 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C45C20A43C8E006DC7D2 /* Element.swift */; };
+		F450C45F20A43D98006DC7D2 /* RegionSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C45E20A43D98006DC7D2 /* RegionSelectionTableViewController.swift */; };
+		F450C46320A442A9006DC7D2 /* RegionSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46220A442A9006DC7D2 /* RegionSelectionTableViewCell.swift */; };
+		F450C46520A448DC006DC7D2 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46420A448DC006DC7D2 /* CategorySelectionViewController.swift */; };
+		F450C46720A493B1006DC7D2 /* ElementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46620A493B1006DC7D2 /* ElementTableViewController.swift */; };
+		F450C46920A4A0D9006DC7D2 /* ElementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46820A4A0D9006DC7D2 /* ElementTableViewCell.swift */; };
+		F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */; };
+		F450C46D20A4CA41006DC7D2 /* LandFauna.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46C20A4CA41006DC7D2 /* LandFauna.swift */; };
+		F450C46F20A4CA76006DC7D2 /* Fauna.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46E20A4CA76006DC7D2 /* Fauna.swift */; };
+		F450C47120A4CAFE006DC7D2 /* Naturals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47020A4CAFE006DC7D2 /* Naturals.swift */; };
+		F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F450C43E20A43C67006DC7D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450C41E20A43C66006DC7D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F450C42520A43C66006DC7D2;
+			remoteInfo = PolarDictionary;
+		};
+		F450C44920A43C67006DC7D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F450C41E20A43C66006DC7D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F450C42520A43C66006DC7D2;
+			remoteInfo = PolarDictionary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F450C42620A43C66006DC7D2 /* PolarDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F450C42920A43C66006DC7D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F450C42B20A43C66006DC7D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F450C42E20A43C66006DC7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F450C43120A43C66006DC7D2 /* PolarDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PolarDictionary.xcdatamodel; sourceTree = "<group>"; };
+		F450C43320A43C67006DC7D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F450C43620A43C67006DC7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F450C43820A43C67006DC7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F450C43D20A43C67006DC7D2 /* PolarDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F450C44120A43C67006DC7D2 /* PolarDictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarDictionaryTests.swift; sourceTree = "<group>"; };
+		F450C44320A43C67006DC7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F450C44820A43C67006DC7D2 /* PolarDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F450C44C20A43C67006DC7D2 /* PolarDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarDictionaryUITests.swift; sourceTree = "<group>"; };
+		F450C44E20A43C67006DC7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F450C45C20A43C8E006DC7D2 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		F450C45E20A43D98006DC7D2 /* RegionSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionTableViewController.swift; sourceTree = "<group>"; };
+		F450C46220A442A9006DC7D2 /* RegionSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		F450C46420A448DC006DC7D2 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
+		F450C46620A493B1006DC7D2 /* ElementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTableViewController.swift; sourceTree = "<group>"; };
+		F450C46820A4A0D9006DC7D2 /* ElementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTableViewCell.swift; sourceTree = "<group>"; };
+		F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaViewController.swift; sourceTree = "<group>"; };
+		F450C46C20A4CA41006DC7D2 /* LandFauna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFauna.swift; sourceTree = "<group>"; };
+		F450C46E20A4CA76006DC7D2 /* Fauna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fauna.swift; sourceTree = "<group>"; };
+		F450C47020A4CAFE006DC7D2 /* Naturals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Naturals.swift; sourceTree = "<group>"; };
+		F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingElementsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F450C42320A43C66006DC7D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F450C43A20A43C67006DC7D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F450C44520A43C67006DC7D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F450C41D20A43C66006DC7D2 = {
+			isa = PBXGroup;
+			children = (
+				F450C42820A43C66006DC7D2 /* PolarDictionary */,
+				F450C44020A43C67006DC7D2 /* PolarDictionaryTests */,
+				F450C44B20A43C67006DC7D2 /* PolarDictionaryUITests */,
+				F450C42720A43C66006DC7D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F450C42720A43C66006DC7D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F450C42620A43C66006DC7D2 /* PolarDictionary.app */,
+				F450C43D20A43C67006DC7D2 /* PolarDictionaryTests.xctest */,
+				F450C44820A43C67006DC7D2 /* PolarDictionaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F450C42820A43C66006DC7D2 /* PolarDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				F450C45B20A43C80006DC7D2 /* Controller */,
+				F450C45A20A43C7A006DC7D2 /* Model */,
+				F450C42920A43C66006DC7D2 /* AppDelegate.swift */,
+				F450C42B20A43C66006DC7D2 /* ViewController.swift */,
+				F450C42D20A43C66006DC7D2 /* Main.storyboard */,
+				F450C43320A43C67006DC7D2 /* Assets.xcassets */,
+				F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */,
+				F450C43820A43C67006DC7D2 /* Info.plist */,
+				F450C43020A43C66006DC7D2 /* PolarDictionary.xcdatamodeld */,
+			);
+			path = PolarDictionary;
+			sourceTree = "<group>";
+		};
+		F450C44020A43C67006DC7D2 /* PolarDictionaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				F450C44120A43C67006DC7D2 /* PolarDictionaryTests.swift */,
+				F450C44320A43C67006DC7D2 /* Info.plist */,
+			);
+			path = PolarDictionaryTests;
+			sourceTree = "<group>";
+		};
+		F450C44B20A43C67006DC7D2 /* PolarDictionaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F450C44C20A43C67006DC7D2 /* PolarDictionaryUITests.swift */,
+				F450C44E20A43C67006DC7D2 /* Info.plist */,
+			);
+			path = PolarDictionaryUITests;
+			sourceTree = "<group>";
+		};
+		F450C45A20A43C7A006DC7D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F450C45C20A43C8E006DC7D2 /* Element.swift */,
+				F450C46C20A4CA41006DC7D2 /* LandFauna.swift */,
+				F450C46E20A4CA76006DC7D2 /* Fauna.swift */,
+				F450C47020A4CAFE006DC7D2 /* Naturals.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F450C45B20A43C80006DC7D2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F450C45E20A43D98006DC7D2 /* RegionSelectionTableViewController.swift */,
+				F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */,
+				F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */,
+				F450C46420A448DC006DC7D2 /* CategorySelectionViewController.swift */,
+				F450C46620A493B1006DC7D2 /* ElementTableViewController.swift */,
+				F450C46820A4A0D9006DC7D2 /* ElementTableViewCell.swift */,
+				F450C46220A442A9006DC7D2 /* RegionSelectionTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F450C42520A43C66006DC7D2 /* PolarDictionary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F450C45120A43C67006DC7D2 /* Build configuration list for PBXNativeTarget "PolarDictionary" */;
+			buildPhases = (
+				F450C42220A43C66006DC7D2 /* Sources */,
+				F450C42320A43C66006DC7D2 /* Frameworks */,
+				F450C42420A43C66006DC7D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolarDictionary;
+			productName = PolarDictionary;
+			productReference = F450C42620A43C66006DC7D2 /* PolarDictionary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F450C43C20A43C67006DC7D2 /* PolarDictionaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F450C45420A43C67006DC7D2 /* Build configuration list for PBXNativeTarget "PolarDictionaryTests" */;
+			buildPhases = (
+				F450C43920A43C67006DC7D2 /* Sources */,
+				F450C43A20A43C67006DC7D2 /* Frameworks */,
+				F450C43B20A43C67006DC7D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F450C43F20A43C67006DC7D2 /* PBXTargetDependency */,
+			);
+			name = PolarDictionaryTests;
+			productName = PolarDictionaryTests;
+			productReference = F450C43D20A43C67006DC7D2 /* PolarDictionaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F450C44720A43C67006DC7D2 /* PolarDictionaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F450C45720A43C67006DC7D2 /* Build configuration list for PBXNativeTarget "PolarDictionaryUITests" */;
+			buildPhases = (
+				F450C44420A43C67006DC7D2 /* Sources */,
+				F450C44520A43C67006DC7D2 /* Frameworks */,
+				F450C44620A43C67006DC7D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F450C44A20A43C67006DC7D2 /* PBXTargetDependency */,
+			);
+			name = PolarDictionaryUITests;
+			productName = PolarDictionaryUITests;
+			productReference = F450C44820A43C67006DC7D2 /* PolarDictionaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F450C41E20A43C66006DC7D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = PIDR;
+				TargetAttributes = {
+					F450C42520A43C66006DC7D2 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F450C43C20A43C67006DC7D2 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F450C42520A43C66006DC7D2;
+					};
+					F450C44720A43C67006DC7D2 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F450C42520A43C66006DC7D2;
+					};
+				};
+			};
+			buildConfigurationList = F450C42120A43C66006DC7D2 /* Build configuration list for PBXProject "PolarDictionary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F450C41D20A43C66006DC7D2;
+			productRefGroup = F450C42720A43C66006DC7D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F450C42520A43C66006DC7D2 /* PolarDictionary */,
+				F450C43C20A43C67006DC7D2 /* PolarDictionaryTests */,
+				F450C44720A43C67006DC7D2 /* PolarDictionaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F450C42420A43C66006DC7D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F450C43720A43C67006DC7D2 /* LaunchScreen.storyboard in Resources */,
+				F450C43420A43C67006DC7D2 /* Assets.xcassets in Resources */,
+				F450C42F20A43C66006DC7D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F450C43B20A43C67006DC7D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F450C44620A43C67006DC7D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F450C42220A43C66006DC7D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F450C46920A4A0D9006DC7D2 /* ElementTableViewCell.swift in Sources */,
+				F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */,
+				F450C46F20A4CA76006DC7D2 /* Fauna.swift in Sources */,
+				F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */,
+				F450C46720A493B1006DC7D2 /* ElementTableViewController.swift in Sources */,
+				F450C42C20A43C66006DC7D2 /* ViewController.swift in Sources */,
+				F450C45F20A43D98006DC7D2 /* RegionSelectionTableViewController.swift in Sources */,
+				F450C47120A4CAFE006DC7D2 /* Naturals.swift in Sources */,
+				F450C46D20A4CA41006DC7D2 /* LandFauna.swift in Sources */,
+				F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */,
+				F450C45D20A43C8E006DC7D2 /* Element.swift in Sources */,
+				F450C46320A442A9006DC7D2 /* RegionSelectionTableViewCell.swift in Sources */,
+				F450C46520A448DC006DC7D2 /* CategorySelectionViewController.swift in Sources */,
+				F450C43220A43C66006DC7D2 /* PolarDictionary.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F450C43920A43C67006DC7D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F450C44220A43C67006DC7D2 /* PolarDictionaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F450C44420A43C67006DC7D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F450C44D20A43C67006DC7D2 /* PolarDictionaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F450C43F20A43C67006DC7D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F450C42520A43C66006DC7D2 /* PolarDictionary */;
+			targetProxy = F450C43E20A43C67006DC7D2 /* PBXContainerItemProxy */;
+		};
+		F450C44A20A43C67006DC7D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F450C42520A43C66006DC7D2 /* PolarDictionary */;
+			targetProxy = F450C44920A43C67006DC7D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F450C42D20A43C66006DC7D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F450C42E20A43C66006DC7D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F450C43620A43C67006DC7D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F450C44F20A43C67006DC7D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F450C45020A43C67006DC7D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F450C45220A43C67006DC7D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FU587N3Y9W;
+				INFOPLIST_FILE = PolarDictionary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PIDR.PolarDictionary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F450C45320A43C67006DC7D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FU587N3Y9W;
+				INFOPLIST_FILE = PolarDictionary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PIDR.PolarDictionary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F450C45520A43C67006DC7D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FU587N3Y9W;
+				INFOPLIST_FILE = PolarDictionaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PIDR.PolarDictionaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarDictionary.app/PolarDictionary";
+			};
+			name = Debug;
+		};
+		F450C45620A43C67006DC7D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FU587N3Y9W;
+				INFOPLIST_FILE = PolarDictionaryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PIDR.PolarDictionaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarDictionary.app/PolarDictionary";
+			};
+			name = Release;
+		};
+		F450C45820A43C67006DC7D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FU587N3Y9W;
+				INFOPLIST_FILE = PolarDictionaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PIDR.PolarDictionaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PolarDictionary;
+			};
+			name = Debug;
+		};
+		F450C45920A43C67006DC7D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FU587N3Y9W;
+				INFOPLIST_FILE = PolarDictionaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PIDR.PolarDictionaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PolarDictionary;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F450C42120A43C66006DC7D2 /* Build configuration list for PBXProject "PolarDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F450C44F20A43C67006DC7D2 /* Debug */,
+				F450C45020A43C67006DC7D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F450C45120A43C67006DC7D2 /* Build configuration list for PBXNativeTarget "PolarDictionary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F450C45220A43C67006DC7D2 /* Debug */,
+				F450C45320A43C67006DC7D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F450C45420A43C67006DC7D2 /* Build configuration list for PBXNativeTarget "PolarDictionaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F450C45520A43C67006DC7D2 /* Debug */,
+				F450C45620A43C67006DC7D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F450C45720A43C67006DC7D2 /* Build configuration list for PBXNativeTarget "PolarDictionaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F450C45820A43C67006DC7D2 /* Debug */,
+				F450C45920A43C67006DC7D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F450C43020A43C66006DC7D2 /* PolarDictionary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F450C43120A43C66006DC7D2 /* PolarDictionary.xcdatamodel */,
+			);
+			currentVersion = F450C43120A43C66006DC7D2 /* PolarDictionary.xcdatamodel */;
+			path = PolarDictionary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F450C41E20A43C66006DC7D2 /* Project object */;
+}
