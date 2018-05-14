@@ -34,11 +34,7 @@ class SortingElementsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let criteria = viewModel.criteriaList[section]
-        if criteria.isCollapsible && criteria.isCollapsed {
-            return 0
-        }
-        return criteria.rowCount
+        return 7
     }
 
     /*
