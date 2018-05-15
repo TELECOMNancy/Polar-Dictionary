@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Abstract_famille" representedClassName="Abstract_famille" isAbstract="YES" parentEntity="Abstract_Lien_Description" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Abstract_famille" representedClassName="Abstract_famille" isAbstract="YES" parentEntity="Abstract_Lien_Descrption" syncable="YES" codeGenerationType="class">
         <attribute name="famille" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Abstract_Lien_Description" representedClassName="Model.Abstract_Lien_Description" isAbstract="YES" syncable="YES" codeGenerationType="category">
-        <attribute name="descrption_" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Abstract_Lien_Descrption" representedClassName="Abstract_Lien_Description" isAbstract="YES" syncable="YES" codeGenerationType="category">
+        <attribute name="descrption" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lien" optional="YES" attributeType="URI" syncable="YES"/>
     </entity>
     <entity name="Abstract_noms" representedClassName=".Abstract_noms" isAbstract="YES" parentEntity="Abstract_famille" syncable="YES" codeGenerationType="class">
@@ -12,52 +12,52 @@
         <attribute name="nom_francais" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nom_latin" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Animaux" representedClassName=".Animaux" parentEntity="Abstract_noms" syncable="YES" codeGenerationType="class">
-        <attribute name="hauteur" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="poids_femelle" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="poids_male" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="Animaux" representedClassName=".Animaux" parentEntity="Abstract_noms" syncable="YES">
+        <attribute name="hauteur" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="poids_femelle" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="poids_male" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Couleurs" representedClassName=".Couleurs" parentEntity="Enumeration" syncable="YES" codeGenerationType="class">
+    <entity name="Couleurs" representedClassName=".Couleurs" parentEntity="Enumeration" syncable="YES">
         <relationship name="oiseaux" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Oiseaux" inverseName="couleur_pattes" inverseEntity="Oiseaux" syncable="YES"/>
         <relationship name="plantes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plantes" inverseName="couleur" inverseEntity="Plantes" syncable="YES"/>
     </entity>
     <entity name="Enumeration" representedClassName="Enumeration" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Lieux" representedClassName=".Lieux" parentEntity="Abstract_Lien_Description" syncable="YES" codeGenerationType="class">
+    <entity name="Lieux" representedClassName=".Lieux" parentEntity="Abstract_Lien_Descrption" syncable="YES">
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photos" inverseName="lieu" inverseEntity="Photos" syncable="YES"/>
         <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plantes" inverseName="lieu" inverseEntity="Plantes" syncable="YES"/>
-        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lieux" inverseName="type" inverseEntity="Lieux" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sous_Type_Lieux" inverseName="lieux" inverseEntity="Sous_Type_Lieux" syncable="YES"/>
     </entity>
-    <entity name="Oiseaux" representedClassName=".Oiseaux" parentEntity="Animaux" syncable="YES" codeGenerationType="class">
+    <entity name="Oiseaux" representedClassName=".Oiseaux" parentEntity="Animaux" syncable="YES">
         <attribute name="envergure" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="longeur" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="couleur_pattes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Couleurs" inverseName="oiseaux" inverseEntity="Couleurs" syncable="YES"/>
         <relationship name="forme_bec" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Oiseaux_Forme_Bec" inverseName="oiseaux" inverseEntity="Oiseaux_Forme_Bec" syncable="YES"/>
         <relationship name="forme_pattes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Oiseaux_Forme_Pattes" inverseName="oiseaux" inverseEntity="Oiseaux_Forme_Pattes" syncable="YES"/>
     </entity>
-    <entity name="Oiseaux_Forme_Bec" representedClassName=".Oiseaux_Forme_Bec" parentEntity="Enumeration" syncable="YES" codeGenerationType="class">
+    <entity name="Oiseaux_Forme_Bec" representedClassName=".Oiseaux_Forme_Bec" parentEntity="Enumeration" syncable="YES">
         <relationship name="oiseaux" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Oiseaux" inverseName="forme_bec" inverseEntity="Oiseaux" syncable="YES"/>
     </entity>
-    <entity name="Oiseaux_Forme_Pattes" representedClassName=".Oiseaux_Forme_Pattes" parentEntity="Enumeration" syncable="YES" codeGenerationType="class">
+    <entity name="Oiseaux_Forme_Pattes" representedClassName=".Oiseaux_Forme_Pattes" parentEntity="Enumeration" syncable="YES">
         <relationship name="oiseaux" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Oiseaux" inverseName="forme_pattes" inverseEntity="Oiseaux" syncable="YES"/>
     </entity>
-    <entity name="Personnages" representedClassName=".Personnages" parentEntity="Abstract_Lien_Description" syncable="YES" codeGenerationType="class">
+    <entity name="Personnages" representedClassName=".Personnages" parentEntity="Abstract_Lien_Descrption" syncable="YES">
         <attribute name="date_de_mort" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="date_de_naissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="nationalite" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Phenomene" representedClassName=".Phenomene" parentEntity="Abstract_Lien_Description" syncable="YES" codeGenerationType="class">
+    <entity name="Phenomene" representedClassName=".Phenomene" parentEntity="Abstract_Lien_Descrption" syncable="YES">
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Photos" representedClassName=".Photos" syncable="YES" codeGenerationType="class">
+    <entity name="Photos" representedClassName=".Photos" syncable="YES">
         <attribute name="data" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <relationship name="lieu" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lieux" inverseName="photos" inverseEntity="Lieux" syncable="YES"/>
         <relationship name="plante" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plantes" inverseName="photo" inverseEntity="Plantes" syncable="YES"/>
     </entity>
-    <entity name="Plantes" representedClassName=".Plantes" parentEntity="Abstract_noms" syncable="YES" codeGenerationType="class">
+    <entity name="Plantes" representedClassName=".Plantes" parentEntity="Abstract_noms" syncable="YES">
         <attribute name="hauteur_max" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="hauteur_min" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nombre_etamines" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -70,18 +70,18 @@
         <relationship name="photo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photos" inverseName="plante" inverseEntity="Photos" syncable="YES"/>
         <relationship name="sous_type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plantes_Sous_Types" inverseName="plante" inverseEntity="Plantes_Sous_Types" syncable="YES"/>
     </entity>
-    <entity name="Plantes_Forme_Feuilles" representedClassName=".Plantes_Forme_Feuilles" parentEntity="Enumeration" syncable="YES" codeGenerationType="class">
+    <entity name="Plantes_Forme_Feuilles" representedClassName=".Plantes_Forme_Feuilles" parentEntity="Enumeration" syncable="YES">
         <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plantes" inverseName="forme_feuilles" inverseEntity="Plantes" syncable="YES"/>
     </entity>
-    <entity name="Plantes_Sous_Types" representedClassName=".Plantes_Sous_Types" parentEntity="Enumeration" syncable="YES" codeGenerationType="class">
+    <entity name="Plantes_Sous_Types" representedClassName=".Plantes_Sous_Types" parentEntity="Enumeration" syncable="YES">
         <relationship name="plante" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plantes" inverseName="sous_type" inverseEntity="Plantes" syncable="YES"/>
     </entity>
-    <entity name="Sous_Type_Lieux" representedClassName=".Sous_Type_Lieux" parentEntity="Enumeration" syncable="YES" codeGenerationType="class">
-        <relationship name="lieux" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lieux" syncable="YES"/>
+    <entity name="Sous_Type_Lieux" representedClassName=".Sous_Type_Lieux" parentEntity="Enumeration" syncable="YES">
+        <relationship name="lieux" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lieux" inverseName="type" inverseEntity="Lieux" syncable="YES"/>
     </entity>
     <elements>
         <element name="Abstract_famille" positionX="225" positionY="-513" width="128" height="60"/>
-        <element name="Abstract_Lien_Description" positionX="225" positionY="-612" width="128" height="75"/>
+        <element name="Abstract_Lien_Descrption" positionX="225" positionY="-612" width="128" height="75"/>
         <element name="Abstract_noms" positionX="225" positionY="-423" width="128" height="90"/>
         <element name="Animaux" positionX="198" positionY="63" width="128" height="90"/>
         <element name="Couleurs" positionX="450" positionY="-9" width="128" height="75"/>

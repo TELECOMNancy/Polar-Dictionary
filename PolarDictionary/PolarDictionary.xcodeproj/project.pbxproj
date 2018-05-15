@@ -7,24 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F44FC16820A9E4740062E6A1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16620A9E4740062E6A1 /* Model.xcdatamodeld */; };
+		F44FC16B20A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */; };
+		F44FC16C20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */; };
+		F44FC16F20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16D20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift */; };
+		F44FC17020A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16E20A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift */; };
+		F44FC17320A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17120A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift */; };
+		F44FC17420A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17220A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift */; };
+		F44FC17720A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17520A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift */; };
+		F44FC17820A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17620A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift */; };
+		F44FC19320A9F1160062E6A1 /* PictureMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17920A9F1160062E6A1 /* PictureMO+CoreDataClass.swift */; };
+		F44FC19420A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17A20A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift */; };
+		F44FC19520A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17B20A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift */; };
+		F44FC19620A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17C20A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift */; };
+		F44FC19720A9F1160062E6A1 /* BirdMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17D20A9F1160062E6A1 /* BirdMO+CoreDataClass.swift */; };
+		F44FC19820A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17E20A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift */; };
+		F44FC19920A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC17F20A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift */; };
+		F44FC19A20A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */; };
+		F44FC19B20A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */; };
+		F44FC19C20A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */; };
+		F44FC19D20A9F1160062E6A1 /* FloraMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */; };
+		F44FC19E20A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */; };
+		F44FC19F20A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */; };
+		F44FC1A020A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */; };
+		F44FC1A120A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */; };
+		F44FC1A220A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18820A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift */; };
+		F44FC1A320A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18920A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift */; };
+		F44FC1A420A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18A20A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift */; };
+		F44FC1A520A9F1160062E6A1 /* LocationMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18B20A9F1160062E6A1 /* LocationMO+CoreDataClass.swift */; };
+		F44FC1A620A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18C20A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift */; };
+		F44FC1A720A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18D20A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift */; };
+		F44FC1A820A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18E20A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift */; };
+		F44FC1A920A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18F20A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift */; };
+		F44FC1AA20A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC19020A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift */; };
+		F44FC1AF20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC1AD20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift */; };
+		F44FC1B020A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC1AE20A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift */; };
+		F44FC1B420A9F5750062E6A1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC1B320A9F5750062E6A1 /* CoreDataManager.swift */; };
 		F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C42920A43C66006DC7D2 /* AppDelegate.swift */; };
 		F450C42C20A43C66006DC7D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C42B20A43C66006DC7D2 /* ViewController.swift */; };
 		F450C42F20A43C66006DC7D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450C42D20A43C66006DC7D2 /* Main.storyboard */; };
-		F450C43220A43C66006DC7D2 /* PolarDictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F450C43020A43C66006DC7D2 /* PolarDictionary.xcdatamodeld */; };
 		F450C43420A43C67006DC7D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F450C43320A43C67006DC7D2 /* Assets.xcassets */; };
 		F450C43720A43C67006DC7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */; };
 		F450C44220A43C67006DC7D2 /* PolarDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C44120A43C67006DC7D2 /* PolarDictionaryTests.swift */; };
 		F450C44D20A43C67006DC7D2 /* PolarDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C44C20A43C67006DC7D2 /* PolarDictionaryUITests.swift */; };
-		F450C45D20A43C8E006DC7D2 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C45C20A43C8E006DC7D2 /* Element.swift */; };
 		F450C45F20A43D98006DC7D2 /* RegionSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C45E20A43D98006DC7D2 /* RegionSelectionTableViewController.swift */; };
 		F450C46320A442A9006DC7D2 /* RegionSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46220A442A9006DC7D2 /* RegionSelectionTableViewCell.swift */; };
 		F450C46520A448DC006DC7D2 /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46420A448DC006DC7D2 /* CategorySelectionViewController.swift */; };
 		F450C46720A493B1006DC7D2 /* ElementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46620A493B1006DC7D2 /* ElementTableViewController.swift */; };
 		F450C46920A4A0D9006DC7D2 /* ElementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46820A4A0D9006DC7D2 /* ElementTableViewCell.swift */; };
 		F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */; };
-		F450C46D20A4CA41006DC7D2 /* LandFauna.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46C20A4CA41006DC7D2 /* LandFauna.swift */; };
-		F450C46F20A4CA76006DC7D2 /* Fauna.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46E20A4CA76006DC7D2 /* Fauna.swift */; };
-		F450C47120A4CAFE006DC7D2 /* Naturals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47020A4CAFE006DC7D2 /* Naturals.swift */; };
 		F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +77,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F44FC16720A9E4740062E6A1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC16D20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturalsMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC16E20A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturalsMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC17120A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaunaMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC17220A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaunaMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC17520A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarineMammals+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC17620A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MarineMammals+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC17920A9F1160062E6A1 /* PictureMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC17A20A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC17B20A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnumerationMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC17C20A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnumerationMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC17D20A9F1160062E6A1 /* BirdMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirdMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC17E20A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BirdMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC17F20A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraTypeMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraTypeMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowerHeightMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowerHeightMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationTypeMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18820A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationTypeMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18920A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturalPhenomenonMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18A20A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturalPhenomenonMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18B20A9F1160062E6A1 /* LocationMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18C20A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18D20A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeavesShapeMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC18E20A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeavesShapeMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC18F20A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandFaunaMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC19020A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandFaunaMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC1AD20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorEnumMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F44FC1AE20A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorEnumMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F44FC1B320A9F5750062E6A1 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F450C42620A43C66006DC7D2 /* PolarDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F450C42920A43C66006DC7D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F450C42B20A43C66006DC7D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F450C42E20A43C66006DC7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F450C43120A43C66006DC7D2 /* PolarDictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PolarDictionary.xcdatamodel; sourceTree = "<group>"; };
 		F450C43320A43C67006DC7D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F450C43620A43C67006DC7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F450C43820A43C67006DC7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,16 +126,12 @@
 		F450C44820A43C67006DC7D2 /* PolarDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F450C44C20A43C67006DC7D2 /* PolarDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarDictionaryUITests.swift; sourceTree = "<group>"; };
 		F450C44E20A43C67006DC7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F450C45C20A43C8E006DC7D2 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		F450C45E20A43D98006DC7D2 /* RegionSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionTableViewController.swift; sourceTree = "<group>"; };
 		F450C46220A442A9006DC7D2 /* RegionSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		F450C46420A448DC006DC7D2 /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
 		F450C46620A493B1006DC7D2 /* ElementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTableViewController.swift; sourceTree = "<group>"; };
 		F450C46820A4A0D9006DC7D2 /* ElementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTableViewCell.swift; sourceTree = "<group>"; };
 		F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaViewController.swift; sourceTree = "<group>"; };
-		F450C46C20A4CA41006DC7D2 /* LandFauna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFauna.swift; sourceTree = "<group>"; };
-		F450C46E20A4CA76006DC7D2 /* Fauna.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fauna.swift; sourceTree = "<group>"; };
-		F450C47020A4CAFE006DC7D2 /* Naturals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Naturals.swift; sourceTree = "<group>"; };
 		F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingElementsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +160,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F44FC1B120A9F3C10062E6A1 /* res */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		F44FC1B220A9F5640062E6A1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F44FC1B320A9F5750062E6A1 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F450C41D20A43C66006DC7D2 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +198,8 @@
 		F450C42820A43C66006DC7D2 /* PolarDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				F44FC1B220A9F5640062E6A1 /* Managers */,
+				F44FC1B120A9F3C10062E6A1 /* res */,
 				F450C45B20A43C80006DC7D2 /* Controller */,
 				F450C45A20A43C7A006DC7D2 /* Model */,
 				F450C42920A43C66006DC7D2 /* AppDelegate.swift */,
@@ -129,7 +208,6 @@
 				F450C43320A43C67006DC7D2 /* Assets.xcassets */,
 				F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */,
 				F450C43820A43C67006DC7D2 /* Info.plist */,
-				F450C43020A43C66006DC7D2 /* PolarDictionary.xcdatamodeld */,
 			);
 			path = PolarDictionary;
 			sourceTree = "<group>";
@@ -155,10 +233,41 @@
 		F450C45A20A43C7A006DC7D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F450C45C20A43C8E006DC7D2 /* Element.swift */,
-				F450C46C20A4CA41006DC7D2 /* LandFauna.swift */,
-				F450C46E20A4CA76006DC7D2 /* Fauna.swift */,
-				F450C47020A4CAFE006DC7D2 /* Naturals.swift */,
+				F44FC1AD20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift */,
+				F44FC1AE20A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift */,
+				F44FC17920A9F1160062E6A1 /* PictureMO+CoreDataClass.swift */,
+				F44FC17A20A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift */,
+				F44FC17B20A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift */,
+				F44FC17C20A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift */,
+				F44FC17D20A9F1160062E6A1 /* BirdMO+CoreDataClass.swift */,
+				F44FC17E20A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift */,
+				F44FC17F20A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift */,
+				F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */,
+				F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */,
+				F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */,
+				F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */,
+				F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */,
+				F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */,
+				F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */,
+				F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */,
+				F44FC18820A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift */,
+				F44FC18920A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift */,
+				F44FC18A20A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift */,
+				F44FC18B20A9F1160062E6A1 /* LocationMO+CoreDataClass.swift */,
+				F44FC18C20A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift */,
+				F44FC18D20A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift */,
+				F44FC18E20A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift */,
+				F44FC18F20A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift */,
+				F44FC19020A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift */,
+				F44FC17520A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift */,
+				F44FC17620A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift */,
+				F44FC17120A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift */,
+				F44FC17220A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift */,
+				F44FC16D20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift */,
+				F44FC16E20A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift */,
+				F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */,
+				F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */,
+				F44FC16620A9E4740062E6A1 /* Model.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,20 +417,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44FC19520A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift in Sources */,
+				F44FC1A020A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift in Sources */,
+				F44FC1A520A9F1160062E6A1 /* LocationMO+CoreDataClass.swift in Sources */,
+				F44FC17820A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift in Sources */,
+				F44FC16F20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift in Sources */,
 				F450C46920A4A0D9006DC7D2 /* ElementTableViewCell.swift in Sources */,
 				F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */,
-				F450C46F20A4CA76006DC7D2 /* Fauna.swift in Sources */,
+				F44FC1A120A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift in Sources */,
+				F44FC19F20A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift in Sources */,
+				F44FC16C20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift in Sources */,
 				F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */,
 				F450C46720A493B1006DC7D2 /* ElementTableViewController.swift in Sources */,
+				F44FC17720A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift in Sources */,
+				F44FC19420A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift in Sources */,
+				F44FC1A620A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift in Sources */,
 				F450C42C20A43C66006DC7D2 /* ViewController.swift in Sources */,
+				F44FC19D20A9F1160062E6A1 /* FloraMO+CoreDataClass.swift in Sources */,
+				F44FC1A820A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift in Sources */,
+				F44FC1AA20A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift in Sources */,
+				F44FC19E20A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift in Sources */,
+				F44FC19720A9F1160062E6A1 /* BirdMO+CoreDataClass.swift in Sources */,
 				F450C45F20A43D98006DC7D2 /* RegionSelectionTableViewController.swift in Sources */,
-				F450C47120A4CAFE006DC7D2 /* Naturals.swift in Sources */,
-				F450C46D20A4CA41006DC7D2 /* LandFauna.swift in Sources */,
 				F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */,
-				F450C45D20A43C8E006DC7D2 /* Element.swift in Sources */,
+				F44FC19320A9F1160062E6A1 /* PictureMO+CoreDataClass.swift in Sources */,
+				F44FC16820A9E4740062E6A1 /* Model.xcdatamodeld in Sources */,
+				F44FC19620A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift in Sources */,
+				F44FC1B020A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift in Sources */,
+				F44FC17420A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift in Sources */,
+				F44FC1A720A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift in Sources */,
+				F44FC19820A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift in Sources */,
+				F44FC1A420A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift in Sources */,
+				F44FC1A320A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift in Sources */,
+				F44FC17320A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift in Sources */,
+				F44FC1B420A9F5750062E6A1 /* CoreDataManager.swift in Sources */,
+				F44FC19C20A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift in Sources */,
+				F44FC1A220A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift in Sources */,
+				F44FC16B20A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift in Sources */,
+				F44FC17020A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift in Sources */,
 				F450C46320A442A9006DC7D2 /* RegionSelectionTableViewCell.swift in Sources */,
 				F450C46520A448DC006DC7D2 /* CategorySelectionViewController.swift in Sources */,
-				F450C43220A43C66006DC7D2 /* PolarDictionary.xcdatamodeld in Sources */,
+				F44FC1A920A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift in Sources */,
+				F44FC19920A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift in Sources */,
+				F44FC1AF20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift in Sources */,
+				F44FC19B20A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift in Sources */,
+				F44FC19A20A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,13 +790,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F450C43020A43C66006DC7D2 /* PolarDictionary.xcdatamodeld */ = {
+		F44FC16620A9E4740062E6A1 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F450C43120A43C66006DC7D2 /* PolarDictionary.xcdatamodel */,
+				F44FC16720A9E4740062E6A1 /* Model.xcdatamodel */,
 			);
-			currentVersion = F450C43120A43C66006DC7D2 /* PolarDictionary.xcdatamodel */;
-			path = PolarDictionary.xcdatamodeld;
+			currentVersion = F44FC16720A9E4740062E6A1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

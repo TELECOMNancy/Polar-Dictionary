@@ -12,7 +12,7 @@ class LandFaunaViewController: UIViewController {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
     
-    var landFauna : LandFauna?
+    //var landFauna : LandFauna?
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var latinNameLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
@@ -26,7 +26,7 @@ class LandFaunaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        /*// Do any additional setup after loading the view.
         nameLabel.text = landFauna?.name
         latinNameLabel.text = landFauna?.latinLabel
         //image
@@ -34,7 +34,7 @@ class LandFaunaViewController: UIViewController {
         descriptionLabel.text = landFauna?.description
         //webLinkButton.truc = landFauna?.webLink
         //TODO: self.landFauna.loadInfo()
-        //latinNameLabel.text = landFauna?.latinLabel etc...
+        //latinNameLabel.text = landFauna?.latinLabel etc...*/
         
     }
 

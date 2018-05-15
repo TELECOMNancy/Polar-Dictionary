@@ -11,7 +11,7 @@ import UIKit
 class ElementTableViewController: UITableViewController {
 
 
-    var elementList = [Element]()
+    var elementList = [ElementMO]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -98,7 +98,7 @@ class ElementTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         super.prepare(for: segue, sender: sender)
-        switch(segue.identifier ?? "") {
+        /*switch(segue.identifier ?? "") {
         case "ShowLandFaunaDetails":
             guard let landFaunaDetailViewController = segue.destination as? LandFaunaViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
@@ -118,6 +118,7 @@ class ElementTableViewController: UITableViewController {
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
+ */
     }
     
 

@@ -35,12 +35,12 @@ class CategorySelectionViewController: UIViewController {
     //MARK: Actions
 
     @IBAction func showFauna(_ sender: UIButton) {
-        let elementListController = storyboard?.instantiateViewController(withIdentifier: "ElementTableViewController") as! ElementTableViewController
+        /*let elementListController = storyboard?.instantiateViewController(withIdentifier: "ElementTableViewController") as! ElementTableViewController
         let newElement1 = Element(name: "chien",description: "je suis un chien", webLink: "chien.org")
         let newElement2 = Element(name: "chat",description: "je suis un chat", webLink: "chat.org")
         elementListController.elementList.append(newElement1)
         elementListController.elementList.append(newElement2)
-        navigationController?.pushViewController(elementListController, animated: true)
+        navigationController?.pushViewController(elementListController, animated: true)*/
     }
     
 }

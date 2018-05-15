@@ -212,7 +212,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="YmW-Nj-FyQ" id="68f-Yj-Fdy"/>
-                                    <segue destination="mci-4g-78s" kind="show" identifier="ShowLandFaunaDetails" id="htY-w6-l4i"/>
+                                    <segue destination="I2o-cQ-b4h" kind="show" identifier="ShowLandFaunaDetails" id="htY-w6-l4i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -345,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOj-ps-Alz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6168.8000000000002" y="22.938530734632685"/>
+            <point key="canvasLocation" x="7428" y="23"/>
         </scene>
         <!--Land Fauna View Controller-->
         <scene sceneID="mUG-B2-mUa">
@@ -425,6 +425,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pnF-OJ-Kvc"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kOi-XP-lv5"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="hfP-dH-Vqw" id="TmX-rQ-lFe"/>
                         <outlet property="familyLabel" destination="Qqw-mi-NDS" id="Gdq-wE-ffl"/>
@@ -439,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3a-Y5-QT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5229.6000000000004" y="-695.80209895052474"/>
+            <point key="canvasLocation" x="7428" y="-767.76611694152928"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kuJ-pS-CzH">
@@ -979,6 +980,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghv-qV-uy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4269.6000000000004" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="07d-UV-o3P">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I2o-cQ-b4h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bfK-Vk-AV1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xss-sb-qWa" kind="show" id="ARs-82-H10"/>
+                        <segue destination="mci-4g-78s" kind="show" identifier="ShowLandFaunaDetails" id="f7X-JT-Jzh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8k-Pj-7bS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6326" y="133"/>
         </scene>
     </scenes>
 </document>

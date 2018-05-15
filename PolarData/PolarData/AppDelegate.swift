@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PolarDictionary
+//  PolarData
 //
-//  Created by Anissa Bokhamy on 10/05/2018.
+//  Created by Anissa Bokhamy on 14/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 
@@ -13,11 +13,9 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var coreDataManager: CoreDataManager!
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        coreDataManager = CoreDataManager(modelName: "Model")
-        print(coreDataManager.managedObjectContext)
         // Override point for customization after application launch.
         return true
     }
@@ -55,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "PolarDictionary")
+        let container = NSPersistentContainer(name: "PolarData")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -90,7 +88,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
 
 }
 

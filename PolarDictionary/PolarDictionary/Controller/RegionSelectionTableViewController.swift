@@ -8,16 +8,71 @@
 
 import Foundation
 import UIKit
+import CoreData
 class RegionSelectionTableViewController : UITableViewController{
     
-    var regionList = ["Alaska","Canada"] //[String]()
+    private let persistentContainer = NSPersistentContainer(name: "Location")
+    
+    var regionList = [LocationMO](){
+        didSet {
+            updateView()
+        }}
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<LocationMO> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<LocationMO> = LocationMO.fetchRequest()
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+        
+        return fetchedResultsController
+    }()
+    
+    private func updateView() {
+        let hasData = regionList.count > 0
+        tableView.isHidden = !hasData
+    }
     
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeFetchedResultsController() 
+        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
+            if let error = error {
+                print("Unable to Load Persistent Store")
+                print("\(error), \(error.localizedDescription)")
+                
+            } else {
+                self.updateView()
+                
+                do {
+                    try self.fetchedResultsController.performFetch()
+                } catch {
+                    let fetchError = error as NSError
+                    print("Unable to Perform Fetch Request")
+                    print("\(fetchError), \(fetchError.localizedDescription)")
+                }
+                
+                self.updateView()
+            }
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let regionList = fetchedResultsController.fetchedObjects else { return 0 }
         return regionList.count
     }
     
@@ -30,10 +85,10 @@ class RegionSelectionTableViewController : UITableViewController{
             fatalError("The dequeued cell is not an instance of RegionSelectionTableViewCell.")
         }
         
-        // Fetches the appropriate meal for the data source layout.
-        let region = regionList[indexPath.row]
+        // Fetch Quote
+        let region = fetchedResultsController.object(at: indexPath)
         
-        cell.regionName.text = region
+        cell.regionName.text = region.name
         return cell
     }
 }
