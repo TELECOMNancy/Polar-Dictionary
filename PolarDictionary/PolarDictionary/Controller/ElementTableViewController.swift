@@ -16,16 +16,17 @@ class ElementTableViewController: UITableViewController {
     //var dataController = 
     
     private let persistentContainer = NSPersistentContainer(name: "Model")
-    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    var fetchedResultsController: NSFetchedResultsController<FloraMO>!
     
     func initializeFetchedResultsController() {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Flora")
+        let request = NSFetchRequest<FloraMO>(entityName: "Flora")
+        request.returnsObjectsAsFaults = false
         let nameSort = NSSortDescriptor(key: "frenchName", ascending: true)
         request.sortDescriptors = [nameSort]
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let moc = appDelegate.coreDataManager.managedObjectContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil) as! NSFetchedResultsController<FloraMO>
         fetchedResultsController.delegate = self as? NSFetchedResultsControllerDelegate
         
         do {
@@ -119,16 +120,14 @@ class ElementTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LandFaunaTableViewCell  else {
             fatalError("The dequeued cell is not an instance of ElementTableViewCell.")
         }
-        
-        
-        
+
         guard let object = self.fetchedResultsController?.object(at: indexPath) as? FloraMO else {
             fatalError("Attempt to configure cell without a managed object")
         }
         // Fetches the appropriate meal for the data source layout.
         //let element = elementsList[indexPath.row]
-        //print(object.frenchName)
-        cell.nameLabel.text = object.frenchName
+        print(object)
+        cell.nameLabel?.text = object.frenchName
         return cell
     }
     
