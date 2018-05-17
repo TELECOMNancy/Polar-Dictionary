@@ -11,7 +11,7 @@ import UIKit
 class LandFaunaViewController: UIViewController {
     
     @IBOutlet weak var navigationBar: UINavigationBar!
-    
+    var data: FloraMO?
     //var landFauna : LandFauna?
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var latinNameLabel: UILabel!
@@ -26,8 +26,9 @@ class LandFaunaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*// Do any additional setup after loading the view.
-        nameLabel.text = landFauna?.name
+        // Do any additional setup after loading the view.
+        nameLabel.text = data?.name
+        /*nameLabel.text = landFauna?.name
         latinNameLabel.text = landFauna?.latinLabel
         //image
         familyLabel.text = "Famille des " + (landFauna?.family)!

@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PolarData.xcodeproj">
+      location = "group:/Users/AnissaBokhamy/Documents/Cours/2A/Semestre4/PIDR/Polar-Dictionary/PolarData/PolarData/Model.xcdatamodeld">
+   </FileRef>
+   <FileRef
+      location = "group:../PolarData/Model">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -10,13 +10,16 @@ import Foundation
 import UIKit
 import CoreData
 class RegionSelectionTableViewController : UITableViewController{
-    
-    private let persistentContainer = NSPersistentContainer(name: "Location")
-    
-    var regionList = [LocationMO](){
+
+    //MARK - Properties
+    var regionList = ["Alaska","Canada"]
+    /* var regionList = [LocationMO](){
         didSet {
             updateView()
         }}
+    var fetchedResultsController: NSFetchedResultsController!
+    
+    //MARK - Functions for Core Data
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<LocationMO> = {
         // Create Fetch Request
         let fetchRequest: NSFetchRequest<LocationMO> = LocationMO.fetchRequest()
@@ -30,16 +33,35 @@ class RegionSelectionTableViewController : UITableViewController{
         return fetchedResultsController
     }()
     
+    
+    
+    
+    func initializeFetchedResultsController() {
+        let request = NSFetchRequest(entityName: "Person")
+        let departmentSort = NSSortDescriptor(key: "department.name", ascending: true)
+        let lastNameSort = NSSortDescriptor(key: "lastName", ascending: true)
+        request.sortDescriptors = [departmentSort, lastNameSort]
+        
+        let moc = coreDataManager.managedObjectContext
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("Failed to initialize FetchedResultsController: \(error)")
+        }
+    }
+    
+    //MARK - Functions for displaying data
     private func updateView() {
         let hasData = regionList.count > 0
         tableView.isHidden = !hasData
-    }
-    
-    
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeFetchedResultsController() 
+        /*initializeFetchedResultsController()
         persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
             if let error = error {
                 print("Unable to Load Persistent Store")
@@ -58,7 +80,7 @@ class RegionSelectionTableViewController : UITableViewController{
                 
                 self.updateView()
             }
-        }
+        }*/
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,7 +94,7 @@ class RegionSelectionTableViewController : UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let regionList = fetchedResultsController.fetchedObjects else { return 0 }
+        //guard let regionList = fetchedResultsController.fetchedObjects else { return 0 }
         return regionList.count
     }
     
@@ -86,9 +108,10 @@ class RegionSelectionTableViewController : UITableViewController{
         }
         
         // Fetch Quote
-        let region = fetchedResultsController.object(at: indexPath)
+        //let region = fetchedResultsController.object(at: indexPath)
         
-        cell.regionName.text = region.name
+        let region = regionList[indexPath.row]
+        cell.regionName.text = region
         return cell
     }
 }

@@ -7,13 +7,77 @@
 //
 
 import UIKit
+import CoreData
 
 class ElementTableViewController: UITableViewController {
 
-
-    var elementList = [ElementMO]()
+    var elementList = [String]()
+    var elementsList = [FloraMO]()
+    //var dataController = 
+    
+    private let persistentContainer = NSPersistentContainer(name: "Model")
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    
+    func initializeFetchedResultsController() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Flora")
+        let nameSort = NSSortDescriptor(key: "frenchName", ascending: true)
+        request.sortDescriptors = [nameSort]
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let moc = appDelegate.coreDataManager.managedObjectContext
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+        
+        do {
+            try fetchedResultsController.performFetch()
+            //recuperer données ici
+            
+        } catch {
+            fatalError("Failed to initialize FetchedResultsController: \(error)")
+        }
+    }
+    
+    // MARK: -
+    
+    /*fileprivate lazy var fetchedResultsController: NSFetchedResultsController<ElementMO> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<ElementMO> = ElementMO.fetchRequest()
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self as! NSFetchedResultsControllerDelegate
+        
+        return fetchedResultsController
+    }()*/
+    
+    //MARK - Function for Core Data
+    
+    /*func initializeFetchedResultsController() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Flora")
+        let nameSort = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [nameSort]
+        
+        let moc = coreDataManager.managedObjectContext
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self as! NSFetchedResultsControllerDelegate
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("Failed to initialize FetchedResultsController: \(error)")
+        }
+    }*/
+    
+    
+    //MARK - Functions for data loading
     override func viewDidLoad() {
         super.viewDidLoad()
+        try self.initializeFetchedResultsController()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,6 +85,10 @@ class ElementTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
+    // MARK: -
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,21 +104,31 @@ class ElementTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return elementList.count
+        guard let sections = self.fetchedResultsController?.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        let sectionInfo = sections[section]
+        return sectionInfo.numberOfObjects
     }
     
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "ElementTableViewCell"
+        let cellIdentifier = "LandFaunaTableViewCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ElementTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LandFaunaTableViewCell  else {
             fatalError("The dequeued cell is not an instance of ElementTableViewCell.")
         }
         
+        
+        
+        guard let object = self.fetchedResultsController?.object(at: indexPath) as? FloraMO else {
+            fatalError("Attempt to configure cell without a managed object")
+        }
         // Fetches the appropriate meal for the data source layout.
-        let element = elementList[indexPath.row]
-        cell.nameLabel.text = element.name
+        //let element = elementsList[indexPath.row]
+        //print(object.frenchName)
+        cell.nameLabel.text = object.frenchName
         return cell
     }
     
@@ -98,13 +176,12 @@ class ElementTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         super.prepare(for: segue, sender: sender)
-        /*switch(segue.identifier ?? "") {
+        switch(segue.identifier ?? "") {
         case "ShowLandFaunaDetails":
             guard let landFaunaDetailViewController = segue.destination as? LandFaunaViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            
-            guard let selectedElementCell = sender as? ElementTableViewCell else {
+            guard let selectedElementCell = sender as? LandFaunaTableViewCell else {
                 fatalError("Unexpected sender: \(String(describing: sender))")
             }
             
@@ -113,12 +190,12 @@ class ElementTableViewController: UITableViewController {
             }
             
             let selectedElement = elementList[indexPath.row]
-            landFaunaDetailViewController.landFauna = LandFauna(name: selectedElement.name, description:selectedElement.description,webLink:selectedElement.webLink)
+            print(selectedElement)
+            landFaunaDetailViewController.data = fetchedResultsController.object(at: indexPath) as! FloraMO
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
- */
     }
     
 

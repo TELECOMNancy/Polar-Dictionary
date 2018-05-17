@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        preloadData()
         return true
     }
 
@@ -86,6 +87,152 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    
+    
+    //MARK: Private functions
+    
+    
+    
+    private(set) lazy var managedObjectContext: NSManagedObjectContext = {
+        let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        
+        managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
+        
+        return managedObjectContext
+    }()
+    
+    
+    private lazy var managedObjectModel: NSManagedObjectModel = {
+        guard let modelURL = Bundle.main.url(forResource: "Model", withExtension: "momd") else {
+            fatalError("Unable to Find Data Model")
+        }
+        
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
+            fatalError("Unable to Load Data Model")
+        }
+        
+        return managedObjectModel
+    }()
+    
+    
+    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        
+        let fileManager = FileManager.default
+        let storeName = "\("Model").sqlite"
+        
+        let documentsDirectoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        
+        let persistentStoreURL = documentsDirectoryURL.appendingPathComponent(storeName)
+        
+        do {
+            try persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                                              configurationName: nil,
+                                                              at: persistentStoreURL,
+                                                              options: nil)
+        } catch {
+            fatalError("Unable to Load Persistent Store")
+        }
+        
+        return persistentStoreCoordinator
+    }()
+    
+    func parseCSV (contentsOfURL: URL, encoding: inout String.Encoding, error: NSErrorPointer) -> [(frenchName:String, englishName:String, latinName: String, type: String, family:String, length:String, nbPetals:String, petalColors: String, nbSepals: String, nbStamens: String, stamens: String, fruit:String, stem: String, leaves: String, description: String, webLink:String, country:String)]? {
+        let delimiter = ","
+        var items:[(frenchName:String, englishName:String, latinName: String, type: String, family:String, length:String, nbPetals:String, petalColors: String, nbSepals: String, nbStamens: String, stamens: String, fruit:String, stem: String, leaves: String, description: String, webLink:String, country:String)]?
+            do{
+                let content = try String(contentsOf: contentsOfURL, usedEncoding: &encoding)
+                items = []
+                let lines:[String] = content.components(separatedBy: NSCharacterSet.newlines as CharacterSet) as [String]
+                
+                for line in lines {
+                    var values:[String] = []
+                    if line != "" {
+                        // For a line with double quotes
+                        // we use NSScanner to perform the parsing
+                        if line.range(of: "\"") != nil {
+                            var textToScan:String = line
+                            var value:NSString?
+                            var textScanner:Scanner = Scanner(string: textToScan)
+                            while textScanner.string != "" {
+                                
+                                if (textScanner.string as NSString).substring(to: 1) == "\"" {
+                                    textScanner.scanLocation += 1
+                                    textScanner.scanUpTo("\"", into: &value)
+                                    textScanner.scanLocation += 1
+                                } else {
+                                    textScanner.scanUpTo(delimiter, into: &value)
+                                }
+                                
+                                // Store the value into the values array
+                                values.append(value! as String)
+                                
+                                // Retrieve the unscanned remainder of the string
+                                if textScanner.scanLocation < textScanner.string.count {
+                                    textToScan = (textScanner.string as NSString).substring(from: textScanner.scanLocation + 1)
+                                } else {
+                                    textToScan = ""
+                                }
+                                textScanner = Scanner(string: textToScan)
+                            }
+                            
+                            // For a line without double quotes, we can simply separate the string
+                            // by using the delimiter (e.g. comma)
+                        } else  {
+                            values = line.components(separatedBy:delimiter)
+                        }
+                        
+                        // Put the values into the tuple and add it to the items array
+                        let item = (frenchName: values[0], englishName: values[1], latinName: values[2], type: values[3], family: values[4], length: values[5], nbPetals: values[7], petalColors: values[8], nbSepals: values[9], nbStamens: values[10], stamens: values[11], fruit: values[12], stem: values[13], leaves: values[14], description: values[15], webLink: values[16],country: values[17])
+                        items?.append(item)
+                    }
+                }
+            }
+        catch{
+            print(error)}
+        
+        return items
+    }
+    
+    func preloadData () {
+        // Retrieve data from the source file
+        if let contentsOfURL = Bundle.main.url(forResource: "Plantes", withExtension: "csv") {
+            
+            // Remove all the menu items before preloading
+            removeData()
+            
+            var error:NSError?
+            var encoding = String.Encoding.utf8
+            if let items = parseCSV(contentsOfURL: contentsOfURL, encoding: &encoding, error: &error) {
+                // Preload the menu items
+                let managedObjectContext = self.managedObjectContext
+                    for item in items {
+                        let floraItem = NSEntityDescription.insertNewObject(forEntityName: "Flora", into: managedObjectContext) as! FloraMO
+                        floraItem.frenchName = item.frenchName
+                        floraItem.englishName = item.englishName
+                        floraItem.latinName = item.latinName
+                        //floraItem.latinName = (item.price as NSString).doubleValue
+                        
+                        do {
+                            try managedObjectContext.save()
+                        } catch {
+                            fatalError("Failure to save context: \(error)")
+                        }
+                    }
+            }
+        }
+    }
+    
+    func removeData () {
+        // Remove the existing items
+        let managedObjectContext = self.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Flora")
+        let menuItems = try? managedObjectContext.fetch(fetchRequest) as! [FloraMO]
+        for menuItem in menuItems! {
+            managedObjectContext.delete(menuItem)
         }
     }
 

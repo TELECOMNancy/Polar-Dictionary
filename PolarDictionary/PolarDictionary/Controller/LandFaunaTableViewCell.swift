@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ElementTableViewCell: UITableViewCell {
+class LandFaunaTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var nameLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bird" representedClassName="BirdMO" parentEntity="Naturals" syncable="YES">
+        <attribute name="beakShape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="legShape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="shape" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="wingspan" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="beakColor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ColorEnum" inverseName="beakColor" inverseEntity="ColorEnum" syncable="YES"/>
+        <relationship name="birdColor" optional="YES" toMany="YES" maxCount="4" deletionRule="Nullify" destinationEntity="ColorEnum" inverseName="birdColor" inverseEntity="ColorEnum" syncable="YES"/>
+        <relationship name="legColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ColorEnum" inverseName="legColor" inverseEntity="ColorEnum" syncable="YES"/>
+    </entity>
+    <entity name="Character" representedClassName="CharacterMO" parentEntity="Element" syncable="YES">
+        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="deathDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nationality" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ColorEnum" representedClassName="ColorEnumMO" parentEntity="Enumeration" syncable="YES">
+        <relationship name="beakColor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bird" inverseName="beakColor" inverseEntity="Bird" syncable="YES"/>
+        <relationship name="birdColor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bird" inverseName="birdColor" inverseEntity="Bird" syncable="YES"/>
+        <relationship name="legColor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bird" inverseName="legColor" inverseEntity="Bird" syncable="YES"/>
+        <relationship name="petalColors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="petalColors" inverseEntity="Flora" syncable="YES"/>
+    </entity>
+    <entity name="Element" representedClassName="ElementMO" syncable="YES">
+        <attribute name="description_" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="webLink" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Enumeration" representedClassName="EnumerationMO" isAbstract="YES" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Fauna" representedClassName="FaunaMO" parentEntity="Naturals" syncable="YES">
+        <attribute name="femaleWeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maleWeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="size" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Flora" representedClassName="FloraMO" parentEntity="Naturals" syncable="YES">
+        <attribute name="nbPetals" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nbStamens" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="floraType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloraType" inverseName="flora" inverseEntity="FloraType" syncable="YES"/>
+        <relationship name="height" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlowerHeight" inverseName="flora" inverseEntity="FlowerHeight" syncable="YES"/>
+        <relationship name="leavesShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LeavesShape" inverseName="flora" inverseEntity="LeavesShape" syncable="YES"/>
+        <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="flora" inverseEntity="Location" syncable="YES"/>
+        <relationship name="petalColors" optional="YES" toMany="YES" maxCount="3" deletionRule="Nullify" destinationEntity="ColorEnum" inverseName="petalColors" inverseEntity="ColorEnum" syncable="YES"/>
+    </entity>
+    <entity name="FloraType" representedClassName="FloraTypeMO" parentEntity="Enumeration" syncable="YES">
+        <relationship name="flora" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="floraType" inverseEntity="Flora" syncable="YES"/>
+    </entity>
+    <entity name="FlowerHeight" representedClassName="FlowerHeightMO" parentEntity="Enumeration" syncable="YES">
+        <relationship name="flora" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="height" inverseEntity="Flora" syncable="YES"/>
+    </entity>
+    <entity name="LandFauna" representedClassName="LandFaunaMO" parentEntity="Fauna" syncable="YES"/>
+    <entity name="LeavesShape" representedClassName="LeavesShapeMO" parentEntity="Enumeration" syncable="YES">
+        <relationship name="flora" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="leavesShape" inverseEntity="Flora" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="LocationMO" parentEntity="Element" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="flora" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="location" inverseEntity="Flora" syncable="YES"/>
+        <relationship name="pictures" optional="YES" toMany="YES" minCount="1" maxCount="4" deletionRule="Nullify" destinationEntity="Picture" inverseName="location" inverseEntity="Picture" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationType" inverseName="location" inverseEntity="LocationType" syncable="YES"/>
+    </entity>
+    <entity name="LocationType" representedClassName="LocationTypeMO" parentEntity="Enumeration" syncable="YES">
+        <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="type" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="MarineMammals" representedClassName="MarineMammalsMO" parentEntity="Fauna" syncable="YES"/>
+    <entity name="NaturalPhenomenon" representedClassName="NaturalPhenomenonMO" parentEntity="Element" syncable="YES">
+        <relationship name="picture" optional="YES" toMany="YES" minCount="1" maxCount="4" deletionRule="Nullify" destinationEntity="Picture" inverseName="naturalPhenomenon" inverseEntity="Picture" syncable="YES"/>
+    </entity>
+    <entity name="Naturals" representedClassName="NaturalsMO" parentEntity="Element" syncable="YES">
+        <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="family" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frenchName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latinName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Picture" representedClassName="PictureMO" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="pictures" inverseEntity="Location" syncable="YES"/>
+        <relationship name="naturalPhenomenon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NaturalPhenomenon" inverseName="picture" inverseEntity="NaturalPhenomenon" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Element" positionX="-45" positionY="0" width="128" height="90"/>
+        <element name="Naturals" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="Fauna" positionX="9" positionY="90" width="128" height="90"/>
+        <element name="LandFauna" positionX="27" positionY="117" width="128" height="45"/>
+        <element name="MarineMammals" positionX="45" positionY="126" width="128" height="45"/>
+        <element name="Bird" positionX="0" positionY="72" width="128" height="165"/>
+        <element name="ColorEnum" positionX="9" positionY="81" width="128" height="105"/>
+        <element name="Flora" positionX="18" positionY="117" width="128" height="150"/>
+        <element name="FloraType" positionX="27" positionY="126" width="128" height="60"/>
+        <element name="LeavesShape" positionX="36" positionY="135" width="128" height="60"/>
+        <element name="FlowerHeight" positionX="45" positionY="153" width="128" height="60"/>
+        <element name="Location" positionX="54" positionY="162" width="128" height="120"/>
+        <element name="Picture" positionX="9" positionY="117" width="128" height="90"/>
+        <element name="LocationType" positionX="18" positionY="126" width="128" height="60"/>
+        <element name="Character" positionX="27" positionY="135" width="128" height="105"/>
+        <element name="NaturalPhenomenon" positionX="36" positionY="144" width="128" height="60"/>
+        <element name="Enumeration" positionX="45" positionY="153" width="128" height="60"/>
+    </elements>
+</model>
