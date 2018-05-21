@@ -12,6 +12,7 @@ import CoreData
 class SelecteurSurEntité: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
 
     var Elements = [String]()
+    var ElementsRaw = [NSManagedObject]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,14 +36,14 @@ class SelecteurSurEntité: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
         
         //3
         do {
-            let elts = try managedContext.fetch(fetchRequest)
+            ElementsRaw = try managedContext.fetch(fetchRequest)
             //print("\(elts.count) Elements trouvés :")
-            Elements = []
-            for elt in elts {
+            Elements = initElements()
+            for elt in ElementsRaw {
                 Elements.append(entitéToString(entité: elt))
             }
-            print("\(Elements.count) éléments trouvés pour \(getEntité()) :")
-            print("\(Elements)")
+            //print("\(Elements.count) éléments trouvés pour \(getEntité()) :")
+            //print("\(Elements)")
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
@@ -56,6 +57,10 @@ class SelecteurSurEntité: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
     
     func entitéToString(entité : NSManagedObject)->String {
         return ""
+    }
+    
+    func initElements()->[String] {
+        return [String]()
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

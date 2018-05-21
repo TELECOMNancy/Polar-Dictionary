@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SelecteurLieu: SelecteurSurEntité {
+class SelecteurLieu: SelecteurOptionnelSurEntité {
 
     override func getEntité() -> String {
         return "Location"

@@ -15,7 +15,7 @@
 		390A86D620B3399300615044 /* SelecteurFlowerHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D520B3399300615044 /* SelecteurFlowerHeight.swift */; };
 		390A86D820B33A2500615044 /* SelecteurSurEntité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D720B33A2500615044 /* SelecteurSurEntité.swift */; };
 		390A86DA20B33B6300615044 /* SelecteurLieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D920B33B6300615044 /* SelecteurLieu.swift */; };
-		390A86DD20B3448300615044 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86DC20B3448300615044 /* ColorButton.swift */; };
+		390A86E020B35E8D00615044 /* SelecteurOptionnelSurEntité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86DF20B35E8D00615044 /* SelecteurOptionnelSurEntité.swift */; };
 		F44FC16820A9E4740062E6A1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16620A9E4740062E6A1 /* Model.xcdatamodeld */; };
 		F44FC16B20A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */; };
 		F44FC16C20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */; };
@@ -95,7 +95,7 @@
 		390A86D520B3399300615044 /* SelecteurFlowerHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurFlowerHeight.swift; sourceTree = "<group>"; };
 		390A86D720B33A2500615044 /* SelecteurSurEntité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelecteurSurEntité.swift"; sourceTree = "<group>"; };
 		390A86D920B33B6300615044 /* SelecteurLieu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurLieu.swift; sourceTree = "<group>"; };
-		390A86DC20B3448300615044 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
+		390A86DF20B35E8D00615044 /* SelecteurOptionnelSurEntité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelecteurOptionnelSurEntité.swift"; sourceTree = "<group>"; };
 		F44FC16720A9E4740062E6A1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -198,6 +198,7 @@
 				390A86D520B3399300615044 /* SelecteurFlowerHeight.swift */,
 				390A86D720B33A2500615044 /* SelecteurSurEntité.swift */,
 				390A86D920B33B6300615044 /* SelecteurLieu.swift */,
+				390A86DF20B35E8D00615044 /* SelecteurOptionnelSurEntité.swift */,
 			);
 			path = UIPickerView;
 			sourceTree = "<group>";
@@ -206,9 +207,49 @@
 			isa = PBXGroup;
 			children = (
 				390A86CC20B324DA00615044 /* SelectableButton.swift */,
-				390A86DC20B3448300615044 /* ColorButton.swift */,
 			);
 			path = Boutons;
+			sourceTree = "<group>";
+		};
+		390A86DE20B359D600615044 /* Model Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F44FC1AD20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift */,
+				F44FC1AE20A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift */,
+				F44FC17920A9F1160062E6A1 /* PictureMO+CoreDataClass.swift */,
+				F44FC17A20A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift */,
+				F44FC17B20A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift */,
+				F44FC17C20A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift */,
+				F44FC17D20A9F1160062E6A1 /* BirdMO+CoreDataClass.swift */,
+				F44FC17E20A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift */,
+				F44FC17F20A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift */,
+				F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */,
+				F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */,
+				F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */,
+				F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */,
+				F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */,
+				F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */,
+				F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */,
+				F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */,
+				F44FC18820A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift */,
+				F44FC18920A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift */,
+				F44FC18A20A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift */,
+				F44FC18B20A9F1160062E6A1 /* LocationMO+CoreDataClass.swift */,
+				F44FC18C20A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift */,
+				F44FC18D20A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift */,
+				F44FC18E20A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift */,
+				F44FC18F20A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift */,
+				F44FC19020A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift */,
+				F44FC17520A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift */,
+				F44FC17620A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift */,
+				F44FC17120A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift */,
+				F44FC17220A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift */,
+				F44FC16D20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift */,
+				F44FC16E20A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift */,
+				F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */,
+				F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */,
+			);
+			path = "Model Classes";
 			sourceTree = "<group>";
 		};
 		F44FC1B120A9F3C10062E6A1 /* res */ = {
@@ -286,40 +327,7 @@
 		F450C45A20A43C7A006DC7D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F44FC1AD20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift */,
-				F44FC1AE20A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift */,
-				F44FC17920A9F1160062E6A1 /* PictureMO+CoreDataClass.swift */,
-				F44FC17A20A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift */,
-				F44FC17B20A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift */,
-				F44FC17C20A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift */,
-				F44FC17D20A9F1160062E6A1 /* BirdMO+CoreDataClass.swift */,
-				F44FC17E20A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift */,
-				F44FC17F20A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift */,
-				F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */,
-				F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */,
-				F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */,
-				F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */,
-				F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */,
-				F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */,
-				F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */,
-				F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */,
-				F44FC18820A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift */,
-				F44FC18920A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift */,
-				F44FC18A20A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift */,
-				F44FC18B20A9F1160062E6A1 /* LocationMO+CoreDataClass.swift */,
-				F44FC18C20A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift */,
-				F44FC18D20A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift */,
-				F44FC18E20A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift */,
-				F44FC18F20A9F1160062E6A1 /* LandFaunaMO+CoreDataClass.swift */,
-				F44FC19020A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift */,
-				F44FC17520A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift */,
-				F44FC17620A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift */,
-				F44FC17120A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift */,
-				F44FC17220A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift */,
-				F44FC16D20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift */,
-				F44FC16E20A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift */,
-				F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */,
-				F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */,
+				390A86DE20B359D600615044 /* Model Classes */,
 				F44FC16620A9E4740062E6A1 /* Model.xcdatamodeld */,
 			);
 			path = Model;
@@ -477,6 +485,7 @@
 				F44FC1A520A9F1160062E6A1 /* LocationMO+CoreDataClass.swift in Sources */,
 				F44FC17820A9E81F0062E6A1 /* MarineMammals+CoreDataProperties.swift in Sources */,
 				F44FC16F20A9E73A0062E6A1 /* NaturalsMO+CoreDataClass.swift in Sources */,
+				390A86E020B35E8D00615044 /* SelecteurOptionnelSurEntité.swift in Sources */,
 				F450C46920A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift in Sources */,
 				F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */,
 				F44FC1A120A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift in Sources */,
@@ -505,7 +514,6 @@
 				F44FC17420A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift in Sources */,
 				F44FC1A720A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift in Sources */,
 				F44FC19820A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift in Sources */,
-				390A86DD20B3448300615044 /* ColorButton.swift in Sources */,
 				F44FC1A420A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift in Sources */,
 				390A86D120B331EC00615044 /* SelecteurSurEnum.swift in Sources */,
 				390A86CF20B32BC000615044 /* SelecteurFloraType.swift in Sources */,

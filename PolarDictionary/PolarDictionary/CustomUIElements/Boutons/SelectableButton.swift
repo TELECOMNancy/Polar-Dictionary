@@ -10,6 +10,7 @@ import UIKit
 
 class SelectableButton: UIButton {
     
+    var Couleur: String
     var isOn = false
 
     /*
@@ -21,11 +22,13 @@ class SelectableButton: UIButton {
     */
     
     override init(frame: CGRect) {
+        self.Couleur = ""
         super.init(frame: frame)
         initButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.Couleur = ""
         super.init(coder: aDecoder)
         initButton()
     }

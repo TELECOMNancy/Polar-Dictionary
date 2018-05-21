@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SelecteurSurEnum : SelecteurSurEntité {
+class SelecteurSurEnum : SelecteurOptionnelSurEntité {
 
     override func entitéToString(entité: NSManagedObject) -> String {
         let nom = entité.value(forKey: "name") as? String

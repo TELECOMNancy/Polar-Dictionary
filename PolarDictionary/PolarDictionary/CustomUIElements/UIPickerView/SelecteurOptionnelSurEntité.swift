@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
-class SelecteurOptionnelSurEntite_: SelecteurSurEntité {
+class SelecteurOptionnelSurEntité: SelecteurSurEntité {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func initElements()->[String] {
+        return ["(rien)"]
     }
-    */
+    
+    func getSelectedRawElement()->NSManagedObject? {
+        if self.selectedRow(inComponent: 0) == 0 {
+            return nil
+        } else {
+            return self.ElementsRaw[self.selectedRow(inComponent: 0)-initElements().count]
+        }
+    }
 
 }

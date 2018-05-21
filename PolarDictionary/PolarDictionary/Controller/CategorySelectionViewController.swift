@@ -32,7 +32,7 @@ class CategorySelectionViewController: UIViewController {
     }
     
     //MARK: Actions
-    
+    /*
     @IBAction func showFauna(_ sender: UIButton) {
         let elementListController = storyboard?.instantiateViewController(withIdentifier: "ElementTableViewController") as! ElementTableViewController
         /*
@@ -43,5 +43,6 @@ class CategorySelectionViewController: UIViewController {
         */
         navigationController?.pushViewController(elementListController, animated: true)
     }
+     */
     
 }
