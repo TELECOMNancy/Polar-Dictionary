@@ -214,6 +214,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let managedObjectContext = self.managedObjectContext
         //Add data to enumerations
         preloadFloraTypes()
+        preloadColors()
         
         // Retrieve data from the source file for Flora
         if let contentsOfURL = Bundle.main.url(forResource: "Plantes", withExtension: "csv") {
@@ -236,10 +237,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         floraItem.floraType = findFloraType(floraType: item.type)
                     }
                     floraItem.family = item.family
-                    //floraItem.length = item.length
-                    //floraItem.nbPetals = item.nbPetals
-                    //floraItem.s
-                    //floraItem.latinName = (item.price as NSString).doubleValue
+                    /*
+                    floraItem.length = item.length
+                    floraItem.nbPetals = Int(item.nbPetals)
+                    petalColors
+                    nbSepals
+                    nbStamens
+                    stamens
+                    fruit
+                    stem
+                    leaves
+                    description
+                    webLink
+                    floraItem.location = item.country
+                    */
+
                     
                     do {
                         try managedObjectContext.save()
@@ -295,6 +307,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let floraTypes = try? managedObjectContext.fetch(fetchRequest) as! [FloraTypeMO]
         assert((floraTypes?.count)! == 1)
         return floraTypes![0]
+    }
+    
+    func removeDataFromColor(){
+        let managedObjectContext = self.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ColorEnum")
+        let colorItems = try? managedObjectContext.fetch(fetchRequest) as! [ColorEnumMO]
+        for colorItem in colorItems! {
+            managedObjectContext.delete(colorItem)
+        }
+    }
+    
+    func preloadColors(){
+        let managedObjectContext = self.managedObjectContext
+        //Add data to enumerations
+        removeDataFromColor()
+        let colors = ["bleu","jaune","rose","gris","blanc","violet","rouge","orange","vert","noir"]
+        for color in colors{
+            let colorItem = NSEntityDescription.insertNewObject(forEntityName: "ColorEnum", into: managedObjectContext) as! ColorEnumMO
+            colorItem.name = color
+            do {
+                try managedObjectContext.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+        }
+    }
+    func findColor(color : String) -> ColorEnumMO {
+        let managedObjectContext = self.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ColorEnum")
+        fetchRequest.predicate = NSPredicate(format:"ANY name LIKE[c] %@",color)
+        let colors = try? managedObjectContext.fetch(fetchRequest) as! [ColorEnumMO]
+        assert((colors?.count)! == 1)
+        return colors![0]
     }
 
 

@@ -38,24 +38,16 @@ class LandFaunaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         frenchNameLabel.text = data?.frenchName
+        
         latinLabel.text = data?.latinName
-        typeLabel.text = data?.floraType?.name
         
         image.image = UIImage(named: "Image")
-        //filling of famillyLabel
-        if(data?.family != ""){
-            familyLabel.text = "Famille des " + (data?.family)!
-        }
-        else{
-            familyLabel.text = "Famille inconnue"
-        }
-        //filling of typeLabel
-        /*if(data?.floraType != ""){
-            typeLabel.text = (data?.type)!
-        }
-        else{
-            typeLabel.text = "type inconnu"
-        }*/
+        
+        if(data?.floraType?.name != ""){typeLabel.text = data?.floraType?.name} else{typeLabel.text = "inconnu"}
+        
+        if(data?.family != ""){familyLabel.text = "Famille des " + (data?.family)!} else{familyLabel.text = "Famille inconnue"}
+        
+        if(data?.description != ""){descriptionLabel.text = data?.description} else{descriptionLabel.text = "Aucune description"}
         //descriptionLabel.text = data?.description_
         
         //webLinkButton.truc = landFauna?.webLink
