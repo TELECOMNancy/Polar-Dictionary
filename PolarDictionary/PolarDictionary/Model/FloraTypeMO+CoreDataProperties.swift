@@ -17,7 +17,7 @@ extension FloraTypeMO {
         return NSFetchRequest<FloraTypeMO>(entityName: "FloraType")
     }
 
-    @NSManaged public var flora: NSSet?
+    @NSManaged public var floraType: NSSet?
 
 }
 

@@ -21,12 +21,12 @@ class ElementTableViewController: UITableViewController {
     func initializeFetchedResultsController() {
         let request = NSFetchRequest<FloraMO>(entityName: "Flora")
         request.returnsObjectsAsFaults = false
-        let nameSort = NSSortDescriptor(key: "frenchName", ascending: true)
+        let nameSort = NSSortDescriptor(key: "nbPetals", ascending: true)
         request.sortDescriptors = [nameSort]
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let moc = appDelegate.coreDataManager.managedObjectContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil) as! NSFetchedResultsController<FloraMO>
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultsController.delegate = self as? NSFetchedResultsControllerDelegate
         
         do {
@@ -121,13 +121,17 @@ class ElementTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of ElementTableViewCell.")
         }
 
-        guard let object = self.fetchedResultsController?.object(at: indexPath) as? FloraMO else {
+        guard let object = self.fetchedResultsController?.object(at: indexPath) else {
             fatalError("Attempt to configure cell without a managed object")
         }
+        let toto = self.fetchedResultsController?.fetchedObjects
         // Fetches the appropriate meal for the data source layout.
         //let element = elementsList[indexPath.row]
-        print(object)
-        cell.nameLabel?.text = object.frenchName
+        //print(object.floraType)
+        //print(object.value(forKey: "frenchName"))
+        //print(object.name)
+        cell.nameLabel?.text = object.value(forKey: "frenchName") as! String
+        cell.latinLabel?.text = object.value(forKey: "latinName") as! String
         return cell
     }
     
@@ -188,9 +192,7 @@ class ElementTableViewController: UITableViewController {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            let selectedElement = elementList[indexPath.row]
-            print(selectedElement)
-            landFaunaDetailViewController.data = fetchedResultsController.object(at: indexPath) as! FloraMO
+            landFaunaDetailViewController.data = self.fetchedResultsController.object(at: indexPath) as! FloraMO
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")

@@ -38,14 +38,14 @@
     <entity name="Flora" representedClassName="FloraMO" parentEntity="Naturals" syncable="YES">
         <attribute name="nbPetals" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nbStamens" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="floraType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloraType" inverseName="flora" inverseEntity="FloraType" syncable="YES"/>
+        <relationship name="floraType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloraType" inverseName="floraType" inverseEntity="FloraType" syncable="YES"/>
         <relationship name="height" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlowerHeight" inverseName="flora" inverseEntity="FlowerHeight" syncable="YES"/>
         <relationship name="leavesShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LeavesShape" inverseName="flora" inverseEntity="LeavesShape" syncable="YES"/>
         <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="flora" inverseEntity="Location" syncable="YES"/>
         <relationship name="petalColors" optional="YES" toMany="YES" maxCount="3" deletionRule="Nullify" destinationEntity="ColorEnum" inverseName="petalColors" inverseEntity="ColorEnum" syncable="YES"/>
     </entity>
     <entity name="FloraType" representedClassName="FloraTypeMO" parentEntity="Enumeration" syncable="YES">
-        <relationship name="flora" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="floraType" inverseEntity="Flora" syncable="YES"/>
+        <relationship name="floraType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="floraType" inverseEntity="Flora" syncable="YES"/>
     </entity>
     <entity name="FlowerHeight" representedClassName="FlowerHeightMO" parentEntity="Enumeration" syncable="YES">
         <relationship name="flora" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flora" inverseName="height" inverseEntity="Flora" syncable="YES"/>
@@ -80,22 +80,22 @@
         <relationship name="naturalPhenomenon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NaturalPhenomenon" inverseName="picture" inverseEntity="NaturalPhenomenon" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Element" positionX="-45" positionY="0" width="128" height="90"/>
-        <element name="Naturals" positionX="-18" positionY="54" width="128" height="105"/>
-        <element name="Fauna" positionX="9" positionY="90" width="128" height="90"/>
-        <element name="LandFauna" positionX="27" positionY="117" width="128" height="45"/>
-        <element name="MarineMammals" positionX="45" positionY="126" width="128" height="45"/>
         <element name="Bird" positionX="0" positionY="72" width="128" height="165"/>
+        <element name="Character" positionX="27" positionY="135" width="128" height="105"/>
         <element name="ColorEnum" positionX="9" positionY="81" width="128" height="105"/>
+        <element name="Element" positionX="-45" positionY="0" width="128" height="90"/>
+        <element name="Enumeration" positionX="45" positionY="153" width="128" height="60"/>
+        <element name="Fauna" positionX="9" positionY="90" width="128" height="90"/>
         <element name="Flora" positionX="18" positionY="117" width="128" height="150"/>
         <element name="FloraType" positionX="27" positionY="126" width="128" height="60"/>
-        <element name="LeavesShape" positionX="36" positionY="135" width="128" height="60"/>
         <element name="FlowerHeight" positionX="45" positionY="153" width="128" height="60"/>
+        <element name="LandFauna" positionX="27" positionY="117" width="128" height="45"/>
+        <element name="LeavesShape" positionX="36" positionY="135" width="128" height="60"/>
         <element name="Location" positionX="54" positionY="162" width="128" height="120"/>
-        <element name="Picture" positionX="9" positionY="117" width="128" height="90"/>
         <element name="LocationType" positionX="18" positionY="126" width="128" height="60"/>
-        <element name="Character" positionX="27" positionY="135" width="128" height="105"/>
+        <element name="MarineMammals" positionX="45" positionY="126" width="128" height="45"/>
         <element name="NaturalPhenomenon" positionX="36" positionY="144" width="128" height="60"/>
-        <element name="Enumeration" positionX="45" positionY="153" width="128" height="60"/>
+        <element name="Naturals" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="Picture" positionX="9" positionY="117" width="128" height="90"/>
     </elements>
 </model>

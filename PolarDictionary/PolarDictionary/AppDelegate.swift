@@ -212,37 +212,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func preloadData () {
         let managedObjectContext = self.managedObjectContext
-        /*let truc = NSEntityDescription.insertNewObject(forEntityName: "Element", into: managedObjectContext) as! ElementMO
-        truc.name = "coucou"
-        do {
-            try managedObjectContext.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }*/
-        // Retrieve data from the source file
+        //Add data to enumerations
+        removeDataFromFloraType()
+        let floraTypes = ["plante","arbre","arbuste","ligneux","mousse","lichens","graminé"]
+        for type in floraTypes{
+            let typeItem = NSEntityDescription.insertNewObject(forEntityName: "FloraType", into: managedObjectContext) as! FloraTypeMO
+            //typeItem.name = type
+            do {
+                try managedObjectContext.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+        }
+        
+        // Retrieve data from the source file for Flora
         if let contentsOfURL = Bundle.main.url(forResource: "Plantes", withExtension: "csv") {
             
             // Remove all the menu items before preloading
-            removeData()
+            removeDataFromFlora()
             
             var error:NSError?
             var encoding = String.Encoding.utf8
             if let items = parseCSV(contentsOfURL: contentsOfURL, encoding: &encoding, error: &error) {
                 // Preload the menu items
                 let managedObjectContext = self.managedObjectContext
-                let truc = NSEntityDescription.insertNewObject(forEntityName: "Element", into: managedObjectContext) as! ElementMO
-                    truc.name = "coucou"
-                do {
-                    try managedObjectContext.save()
-                } catch {
-                    fatalError("Failure to save context: \(error)")
-                }
                 
                 for item in items {
                     let floraItem = NSEntityDescription.insertNewObject(forEntityName: "Flora", into: managedObjectContext) as! FloraMO
                     floraItem.frenchName = item.frenchName
                     floraItem.englishName = item.englishName
                     floraItem.latinName = item.latinName
+                    //floraItem.floraType = FloraTypeMO//item.type
+                    floraItem.family = item.family
+                    //floraItem.length = item.length
+                    //floraItem.nbPetals = item.nbPetals
+                    //floraItem.s
                     //floraItem.latinName = (item.price as NSString).doubleValue
                     
                     do {
@@ -255,11 +259,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func removeData () {
+    func removeDataFromFlora () {
         // Remove the existing items
         let managedObjectContext = self.managedObjectContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Flora")
         let menuItems = try? managedObjectContext.fetch(fetchRequest) as! [FloraMO]
+        for menuItem in menuItems! {
+            managedObjectContext.delete(menuItem)
+        }
+    }
+    
+    func removeDataFromFloraType () {
+        // Remove the existing items
+        let managedObjectContext = self.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FloraType")
+        let menuItems = try? managedObjectContext.fetch(fetchRequest) as! [FloraTypeMO]
         for menuItem in menuItems! {
             managedObjectContext.delete(menuItem)
         }

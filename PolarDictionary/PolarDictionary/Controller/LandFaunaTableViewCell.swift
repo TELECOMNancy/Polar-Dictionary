@@ -13,6 +13,7 @@ class LandFaunaTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var latinLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

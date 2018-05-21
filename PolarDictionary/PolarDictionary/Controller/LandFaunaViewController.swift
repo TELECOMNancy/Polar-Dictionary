@@ -10,29 +10,52 @@ import UIKit
 
 class LandFaunaViewController: UIViewController {
     
-    @IBOutlet weak var navigationBar: UINavigationBar!
+    //@IBOutlet weak var navigationBar: UINavigationBar!
     var data: FloraMO?
-    //var landFauna : LandFauna?
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var latinNameLabel: UILabel!
+
     @IBOutlet weak var image: UIImageView!
+    //@IBOutlet weak var familyLabel: UILabel!
+    //@IBOutlet weak var descriptionLabel: UILabel!
+    //@IBOutlet weak var sizeLabel: UILabel!
+    //@IBOutlet weak var femaleWeightLabel: UILabel!
+    //@IBOutlet weak var maleWeightLabel: UILabel!
+    //@IBOutlet weak var webLinkButton: UIButton!
+    
+    
+    
+    @IBOutlet weak var frenchNameLabel: UILabel!
+    @IBOutlet weak var latinLabel: UILabel!
     @IBOutlet weak var familyLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var sizeLabel: UILabel!
-    @IBOutlet weak var femaleWeightLabel: UILabel!
-    @IBOutlet weak var maleWeightLabel: UILabel!
-    @IBOutlet weak var webLinkButton: UIButton!
+    @IBOutlet weak var sepalsPetalsLabel: UILabel!
+    @IBOutlet weak var stemLabel: UILabel!
+    @IBOutlet weak var fruitLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        nameLabel.text = data?.name
-        /*nameLabel.text = landFauna?.name
-        latinNameLabel.text = landFauna?.latinLabel
-        //image
-        familyLabel.text = "Famille des " + (landFauna?.family)!
-        descriptionLabel.text = landFauna?.description
+        frenchNameLabel.text = data?.frenchName
+        latinLabel.text = data?.latinName
+        image.image = UIImage(named: "Image")
+        //filling of famillyLabel
+        if(data?.family != ""){
+            familyLabel.text = "Famille des " + (data?.family)!
+        }
+        else{
+            familyLabel.text = "Famille inconnue"
+        }
+        //filling of typeLabel
+        /*if(data?.floraType != ""){
+            typeLabel.text = (data?.type)!
+        }
+        else{
+            typeLabel.text = "type inconnu"
+        }*/
+        //descriptionLabel.text = data?.description_
+        
         //webLinkButton.truc = landFauna?.webLink
         //TODO: self.landFauna.loadInfo()
         //latinNameLabel.text = landFauna?.latinLabel etc...*/

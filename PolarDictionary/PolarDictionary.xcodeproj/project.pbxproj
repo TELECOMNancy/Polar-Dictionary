@@ -46,7 +46,6 @@
 		F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C42920A43C66006DC7D2 /* AppDelegate.swift */; };
 		F450C42C20A43C66006DC7D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C42B20A43C66006DC7D2 /* ViewController.swift */; };
 		F450C42F20A43C66006DC7D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450C42D20A43C66006DC7D2 /* Main.storyboard */; };
-		F450C43420A43C67006DC7D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F450C43320A43C67006DC7D2 /* Assets.xcassets */; };
 		F450C43720A43C67006DC7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */; };
 		F450C44220A43C67006DC7D2 /* PolarDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C44120A43C67006DC7D2 /* PolarDictionaryTests.swift */; };
 		F450C44D20A43C67006DC7D2 /* PolarDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C44C20A43C67006DC7D2 /* PolarDictionaryUITests.swift */; };
@@ -58,6 +57,7 @@
 		F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */; };
 		F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */; };
 		F4F1F3D020AC4E89001A6A95 /* Plantes.csv in Resources */ = {isa = PBXBuildFile; fileRef = F4F1F3CE20AC4E2F001A6A95 /* Plantes.csv */; };
+		F4F1F3D520ADCC62001A6A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +118,6 @@
 		F450C42920A43C66006DC7D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F450C42B20A43C66006DC7D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F450C42E20A43C66006DC7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F450C43320A43C67006DC7D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F450C43620A43C67006DC7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F450C43820A43C67006DC7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F450C43D20A43C67006DC7D2 /* PolarDictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarDictionaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +134,7 @@
 		F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaViewController.swift; sourceTree = "<group>"; };
 		F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingElementsTableViewController.swift; sourceTree = "<group>"; };
 		F4F1F3CE20AC4E2F001A6A95 /* Plantes.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Plantes.csv; path = PolarDictionary/res/Plantes.csv; sourceTree = "<group>"; };
+		F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PolarDictionary/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +206,9 @@
 				F450C45B20A43C80006DC7D2 /* Controller */,
 				F450C45A20A43C7A006DC7D2 /* Model */,
 				F450C42920A43C66006DC7D2 /* AppDelegate.swift */,
+				F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */,
 				F450C42B20A43C66006DC7D2 /* ViewController.swift */,
 				F450C42D20A43C66006DC7D2 /* Main.storyboard */,
-				F450C43320A43C67006DC7D2 /* Assets.xcassets */,
 				F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */,
 				F450C43820A43C67006DC7D2 /* Info.plist */,
 			);
@@ -395,7 +395,7 @@
 			files = (
 				F4F1F3D020AC4E89001A6A95 /* Plantes.csv in Resources */,
 				F450C43720A43C67006DC7D2 /* LaunchScreen.storyboard in Resources */,
-				F450C43420A43C67006DC7D2 /* Assets.xcassets in Resources */,
+				F4F1F3D520ADCC62001A6A95 /* Assets.xcassets in Resources */,
 				F450C42F20A43C66006DC7D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
