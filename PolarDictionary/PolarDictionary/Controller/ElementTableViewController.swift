@@ -16,7 +16,7 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
     //var dataController = 
     
     var fetchedResultsController: NSFetchedResultsController<FloraMO>!
-    var request:NSFetchRequest<FloraMO> = {
+    var default_request:NSFetchRequest<FloraMO> = {
         let request = NSFetchRequest<FloraMO>(entityName: "Flora")
         request.returnsObjectsAsFaults = false
         let nameSort = NSSortDescriptor(key: "nbPetals", ascending: true)
@@ -24,24 +24,25 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
         return request
     }()
     
-    func initializeFetchedResultsController() {
+    func initializeFetchedResultsController(request: NSFetchRequest<FloraMO>)->NSFetchedResultsController<FloraMO>! {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let moc = appDelegate.coreDataManager.managedObjectContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultsController.delegate = self
+        let fetchedResultsController_ = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController_.delegate = self
         
         do {
-            try fetchedResultsController.performFetch()
+            try fetchedResultsController_.performFetch()
         } catch {
             fatalError("Failed to initialize FetchedResultsController: \(error)")
         }
+        return fetchedResultsController_
     }
     
     //MARK - Functions for data loading
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initializeFetchedResultsController()
+        self.fetchedResultsController = initializeFetchedResultsController(request: default_request)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -134,6 +135,16 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
 
     
     // MARK: - Navigation
+    @IBAction func unwindFromSearch(_ sender : UIStoryboardSegue) {
+        if sender.source is RechercheController {
+            if let senderVC = sender.source as? RechercheController {
+                self.fetchedResultsController = initializeFetchedResultsController(request: senderVC.request)
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -154,7 +165,8 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
             }
             
             landFaunaDetailViewController.data = self.fetchedResultsController.object(at: indexPath)
-            
+        case "toSearch":
+            break
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }

@@ -43,6 +43,7 @@ class RechercheController: UITableViewController {
     var hauteurs = [String]()
     var Lieux = [String]()
     
+    var request:NSFetchRequest<FloraMO>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +105,7 @@ class RechercheController: UITableViewController {
         super.prepare(for: segue, sender: sender)
         switch(segue.identifier ?? "") {
         case "searchToResults":
-            guard let ETVC = segue.destination as? ElementTableViewController else {
+            if !(segue.destination is ElementTableViewController) {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             // fait ta tambouille avec les sélécteurs et les options
@@ -167,7 +168,7 @@ class RechercheController: UITableViewController {
             let finalPredicate = NSCompoundPredicate(type: .and, subpredicates: [colorsPredicate,selectorsPredicate])
             print("finalPredicate : \(finalPredicate)")
             
-            ETVC.request = {
+            request = {
                 let request = NSFetchRequest<FloraMO>(entityName: "Flora")
                 request.returnsObjectsAsFaults = false
                 let nameSort = NSSortDescriptor(key: "nbPetals", ascending: true)
