@@ -226,7 +226,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="Bzh-Yc-vaK">
+                    <navigationItem key="navigationItem" title="Éléments trouvés" id="Bzh-Yc-vaK">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="UWi-bI-LXM">
                             <connections>
                                 <segue destination="Z5Y-ye-KpW" kind="show" identifier="toSearch" id="X4b-JD-Afj"/>
@@ -240,7 +240,7 @@
             </objects>
             <point key="canvasLocation" x="4020" y="133"/>
         </scene>
-        <!--Title-->
+        <!--Flore-->
         <scene sceneID="KQi-MS-pXK">
             <objects>
                 <viewController id="xss-sb-qWa" customClass="LandFaunaViewController" customModule="PolarDictionary" customModuleProvider="target" sceneMemberID="viewController">
@@ -370,7 +370,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wnO-I0-hsF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8o3-qB-HFa"/>
+                    <navigationItem key="navigationItem" title="Flore" id="8o3-qB-HFa"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="ZYO-u8-QEo" id="Mqs-aL-Tmm"/>
                         <outlet property="familyLabel" destination="KG3-4B-mex" id="afa-vv-Pir"/>
@@ -1063,7 +1063,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recherche" id="jCV-0B-Oe9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="OuB-lb-Ose">
+                        <barButtonItem key="rightBarButtonItem" title="Filtrer" id="OuB-lb-Ose">
                             <connections>
                                 <segue destination="DGX-Pa-mBG" kind="unwind" identifier="searchToResults" unwindAction="unwindFromSearch:" id="CZ7-E6-Fme"/>
                             </connections>
