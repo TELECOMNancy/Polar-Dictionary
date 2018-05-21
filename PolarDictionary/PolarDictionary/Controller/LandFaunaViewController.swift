@@ -39,6 +39,8 @@ class LandFaunaViewController: UIViewController {
         super.viewDidLoad()
         frenchNameLabel.text = data?.frenchName
         latinLabel.text = data?.latinName
+        typeLabel.text = data?.floraType?.name
+        
         image.image = UIImage(named: "Image")
         //filling of famillyLabel
         if(data?.family != ""){

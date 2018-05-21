@@ -91,6 +91,7 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
         //print(object.name)
         cell.nameLabel?.text = object.value(forKey: "frenchName") as? String
         cell.latinLabel?.text = object.value(forKey: "latinName") as? String
+        
         return cell
     }
     

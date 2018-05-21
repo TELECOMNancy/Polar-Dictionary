@@ -213,17 +213,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func preloadData () {
         let managedObjectContext = self.managedObjectContext
         //Add data to enumerations
-        removeDataFromFloraType()
-        let floraTypes = ["plante","arbre","arbuste","ligneux","mousse","lichens","graminé"]
-        for type in floraTypes {
-            let typeItem = NSEntityDescription.insertNewObject(forEntityName: "FloraType", into: managedObjectContext) as! FloraTypeMO
-            typeItem.name = type
-            do {
-                try managedObjectContext.save()
-            } catch {
-                fatalError("Failure to save context: \(error)")
-            }
-        }
+        preloadFloraTypes()
         
         // Retrieve data from the source file for Flora
         if let contentsOfURL = Bundle.main.url(forResource: "Plantes", withExtension: "csv") {
@@ -242,7 +232,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     floraItem.frenchName = item.frenchName
                     floraItem.englishName = item.englishName
                     floraItem.latinName = item.latinName
-                    //floraItem.floraType = FloraTypeMO//item.type
+                    if(item.type != ""){
+                        floraItem.floraType = findFloraType(floraType: item.type)
+                    }
                     floraItem.family = item.family
                     //floraItem.length = item.length
                     //floraItem.nbPetals = item.nbPetals
@@ -269,7 +261,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func removeDataFromFloraType () {
+    
+    func removeDataFromFloraType() {
         // Remove the existing items
         let managedObjectContext = self.managedObjectContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FloraType")
@@ -277,6 +270,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         for menuItem in menuItems! {
             managedObjectContext.delete(menuItem)
         }
+    }
+    
+    
+    func preloadFloraTypes(){
+        let managedObjectContext = self.managedObjectContext
+        //Add data to enumerations
+        removeDataFromFloraType()
+        let floraTypes = ["plante","arbre","arbuste","ligneux","mousse","lichens","graminé"]
+        for type in floraTypes{
+            let typeItem = NSEntityDescription.insertNewObject(forEntityName: "FloraType", into: managedObjectContext) as! FloraTypeMO
+            typeItem.name = type
+            do {
+                try managedObjectContext.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+        }
+    }
+    func findFloraType(floraType : String) -> FloraTypeMO {
+        let managedObjectContext = self.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FloraType")
+        fetchRequest.predicate = NSPredicate(format:"ANY name LIKE[c] %@",floraType)
+        let floraTypes = try? managedObjectContext.fetch(fetchRequest) as! [FloraTypeMO]
+        assert((floraTypes?.count)! == 1)
+        return floraTypes![0]
     }
 
 
