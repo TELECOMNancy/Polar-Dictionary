@@ -9,76 +9,39 @@
 import UIKit
 import CoreData
 
-class ElementTableViewController: UITableViewController {
+class ElementTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var elementList = [String]()
     var elementsList = [FloraMO]()
     //var dataController = 
     
-    private let persistentContainer = NSPersistentContainer(name: "Model")
     var fetchedResultsController: NSFetchedResultsController<FloraMO>!
-    
-    func initializeFetchedResultsController() {
+    var request:NSFetchRequest<FloraMO> = {
         let request = NSFetchRequest<FloraMO>(entityName: "Flora")
         request.returnsObjectsAsFaults = false
         let nameSort = NSSortDescriptor(key: "nbPetals", ascending: true)
         request.sortDescriptors = [nameSort]
+        return request
+    }()
+    
+    func initializeFetchedResultsController() {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let moc = appDelegate.coreDataManager.managedObjectContext
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultsController.delegate = self as? NSFetchedResultsControllerDelegate
+        fetchedResultsController.delegate = self
         
         do {
             try fetchedResultsController.performFetch()
-            //recuperer données ici
-            
         } catch {
             fatalError("Failed to initialize FetchedResultsController: \(error)")
         }
     }
     
-    // MARK: -
-    
-    /*fileprivate lazy var fetchedResultsController: NSFetchedResultsController<ElementMO> = {
-        // Create Fetch Request
-        let fetchRequest: NSFetchRequest<ElementMO> = ElementMO.fetchRequest()
-        
-        // Configure Fetch Request
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
-        
-        // Create Fetched Results Controller
-        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
-        
-        // Configure Fetched Results Controller
-        fetchedResultsController.delegate = self as! NSFetchedResultsControllerDelegate
-        
-        return fetchedResultsController
-    }()*/
-    
-    //MARK - Function for Core Data
-    
-    /*func initializeFetchedResultsController() {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Flora")
-        let nameSort = NSSortDescriptor(key: "name", ascending: true)
-        request.sortDescriptors = [nameSort]
-        
-        let moc = coreDataManager.managedObjectContext
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultsController.delegate = self as! NSFetchedResultsControllerDelegate
-        
-        do {
-            try fetchedResultsController.performFetch()
-        } catch {
-            fatalError("Failed to initialize FetchedResultsController: \(error)")
-        }
-    }*/
-    
-    
     //MARK - Functions for data loading
     override func viewDidLoad() {
         super.viewDidLoad()
-        try self.initializeFetchedResultsController()
+        self.initializeFetchedResultsController()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -87,9 +50,6 @@ class ElementTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    
-    // MARK: -
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -97,7 +57,6 @@ class ElementTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -124,14 +83,14 @@ class ElementTableViewController: UITableViewController {
         guard let object = self.fetchedResultsController?.object(at: indexPath) else {
             fatalError("Attempt to configure cell without a managed object")
         }
-        let toto = self.fetchedResultsController?.fetchedObjects
+        
         // Fetches the appropriate meal for the data source layout.
         //let element = elementsList[indexPath.row]
         //print(object.floraType)
         //print(object.value(forKey: "frenchName"))
         //print(object.name)
-        cell.nameLabel?.text = object.value(forKey: "frenchName") as! String
-        cell.latinLabel?.text = object.value(forKey: "latinName") as! String
+        cell.nameLabel?.text = object.value(forKey: "frenchName") as? String
+        cell.latinLabel?.text = object.value(forKey: "latinName") as? String
         return cell
     }
     
@@ -192,7 +151,7 @@ class ElementTableViewController: UITableViewController {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            landFaunaDetailViewController.data = self.fetchedResultsController.object(at: indexPath) as! FloraMO
+            landFaunaDetailViewController.data = self.fetchedResultsController.object(at: indexPath)
             
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")

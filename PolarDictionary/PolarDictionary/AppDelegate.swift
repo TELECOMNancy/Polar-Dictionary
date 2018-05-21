@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let coordinator = moc.persistentStoreCoordinator
         let stored = coordinator?.persistentStores
         for store in stored!{
-            print(store.url)
+            print(store.url!)
         }
         preloadData()
         
@@ -215,9 +215,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Add data to enumerations
         removeDataFromFloraType()
         let floraTypes = ["plante","arbre","arbuste","ligneux","mousse","lichens","graminé"]
-        for type in floraTypes{
+        for type in floraTypes {
             let typeItem = NSEntityDescription.insertNewObject(forEntityName: "FloraType", into: managedObjectContext) as! FloraTypeMO
-            //typeItem.name = type
+            typeItem.name = type
             do {
                 try managedObjectContext.save()
             } catch {

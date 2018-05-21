@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390A86CA20B31C0600615044 /* RechercheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86C920B31C0600615044 /* RechercheController.swift */; };
+		390A86CD20B324DA00615044 /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86CC20B324DA00615044 /* SelectableButton.swift */; };
+		390A86CF20B32BC000615044 /* SelecteurFloraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86CE20B32BBF00615044 /* SelecteurFloraType.swift */; };
+		390A86D120B331EC00615044 /* SelecteurSurEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D020B331EC00615044 /* SelecteurSurEnum.swift */; };
+		390A86D420B3368200615044 /* SelecteurFormeFeuilles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D320B3368200615044 /* SelecteurFormeFeuilles.swift */; };
+		390A86D620B3399300615044 /* SelecteurFlowerHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D520B3399300615044 /* SelecteurFlowerHeight.swift */; };
+		390A86D820B33A2500615044 /* SelecteurSurEntité.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D720B33A2500615044 /* SelecteurSurEntité.swift */; };
+		390A86DA20B33B6300615044 /* SelecteurLieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86D920B33B6300615044 /* SelecteurLieu.swift */; };
+		390A86DD20B3448300615044 /* ColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A86DC20B3448300615044 /* ColorButton.swift */; };
 		F44FC16820A9E4740062E6A1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16620A9E4740062E6A1 /* Model.xcdatamodeld */; };
 		F44FC16B20A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */; };
 		F44FC16C20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */; };
@@ -78,6 +87,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		390A86C920B31C0600615044 /* RechercheController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechercheController.swift; sourceTree = "<group>"; };
+		390A86CC20B324DA00615044 /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
+		390A86CE20B32BBF00615044 /* SelecteurFloraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurFloraType.swift; sourceTree = "<group>"; };
+		390A86D020B331EC00615044 /* SelecteurSurEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurSurEnum.swift; sourceTree = "<group>"; };
+		390A86D320B3368200615044 /* SelecteurFormeFeuilles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurFormeFeuilles.swift; sourceTree = "<group>"; };
+		390A86D520B3399300615044 /* SelecteurFlowerHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurFlowerHeight.swift; sourceTree = "<group>"; };
+		390A86D720B33A2500615044 /* SelecteurSurEntité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelecteurSurEntité.swift"; sourceTree = "<group>"; };
+		390A86D920B33B6300615044 /* SelecteurLieu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecteurLieu.swift; sourceTree = "<group>"; };
+		390A86DC20B3448300615044 /* ColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorButton.swift; sourceTree = "<group>"; };
 		F44FC16720A9E4740062E6A1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F44FC16920A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F44FC16A20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -162,6 +180,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390A86CB20B324B900615044 /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				390A86DB20B3445500615044 /* Boutons */,
+				390A86D220B3363B00615044 /* UIPickerView */,
+			);
+			path = CustomUIElements;
+			sourceTree = "<group>";
+		};
+		390A86D220B3363B00615044 /* UIPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				390A86CE20B32BBF00615044 /* SelecteurFloraType.swift */,
+				390A86D020B331EC00615044 /* SelecteurSurEnum.swift */,
+				390A86D320B3368200615044 /* SelecteurFormeFeuilles.swift */,
+				390A86D520B3399300615044 /* SelecteurFlowerHeight.swift */,
+				390A86D720B33A2500615044 /* SelecteurSurEntité.swift */,
+				390A86D920B33B6300615044 /* SelecteurLieu.swift */,
+			);
+			path = UIPickerView;
+			sourceTree = "<group>";
+		};
+		390A86DB20B3445500615044 /* Boutons */ = {
+			isa = PBXGroup;
+			children = (
+				390A86CC20B324DA00615044 /* SelectableButton.swift */,
+				390A86DC20B3448300615044 /* ColorButton.swift */,
+			);
+			path = Boutons;
+			sourceTree = "<group>";
+		};
 		F44FC1B120A9F3C10062E6A1 /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +250,7 @@
 		F450C42820A43C66006DC7D2 /* PolarDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				390A86CB20B324B900615044 /* CustomUIElements */,
 				F44FC1B220A9F5640062E6A1 /* Managers */,
 				F44FC1B120A9F3C10062E6A1 /* res */,
 				F450C45B20A43C80006DC7D2 /* Controller */,
@@ -285,6 +335,7 @@
 				F450C46620A493B1006DC7D2 /* ElementTableViewController.swift */,
 				F450C46820A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift */,
 				F450C46220A442A9006DC7D2 /* RegionSelectionTableViewCell.swift */,
+				390A86C920B31C0600615044 /* RechercheController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -430,9 +481,11 @@
 				F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */,
 				F44FC1A120A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift in Sources */,
 				F44FC19F20A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift in Sources */,
+				390A86D820B33A2500615044 /* SelecteurSurEntité.swift in Sources */,
 				F44FC16C20A9E53D0062E6A1 /* ElementMO+CoreDataProperties.swift in Sources */,
 				F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */,
 				F450C46720A493B1006DC7D2 /* ElementTableViewController.swift in Sources */,
+				390A86DA20B33B6300615044 /* SelecteurLieu.swift in Sources */,
 				F44FC17720A9E81F0062E6A1 /* MarineMammals+CoreDataClass.swift in Sources */,
 				F44FC19420A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift in Sources */,
 				F44FC1A620A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift in Sources */,
@@ -445,19 +498,25 @@
 				F450C45F20A43D98006DC7D2 /* RegionSelectionTableViewController.swift in Sources */,
 				F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */,
 				F44FC19320A9F1160062E6A1 /* PictureMO+CoreDataClass.swift in Sources */,
+				390A86CA20B31C0600615044 /* RechercheController.swift in Sources */,
 				F44FC16820A9E4740062E6A1 /* Model.xcdatamodeld in Sources */,
 				F44FC19620A9F1160062E6A1 /* EnumerationMO+CoreDataProperties.swift in Sources */,
 				F44FC1B020A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift in Sources */,
 				F44FC17420A9E79B0062E6A1 /* FaunaMO+CoreDataProperties.swift in Sources */,
 				F44FC1A720A9F1160062E6A1 /* LeavesShapeMO+CoreDataClass.swift in Sources */,
 				F44FC19820A9F1160062E6A1 /* BirdMO+CoreDataProperties.swift in Sources */,
+				390A86DD20B3448300615044 /* ColorButton.swift in Sources */,
 				F44FC1A420A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataProperties.swift in Sources */,
+				390A86D120B331EC00615044 /* SelecteurSurEnum.swift in Sources */,
+				390A86CF20B32BC000615044 /* SelecteurFloraType.swift in Sources */,
 				F44FC1A320A9F1160062E6A1 /* NaturalPhenomenonMO+CoreDataClass.swift in Sources */,
+				390A86CD20B324DA00615044 /* SelectableButton.swift in Sources */,
 				F44FC17320A9E79B0062E6A1 /* FaunaMO+CoreDataClass.swift in Sources */,
 				F44FC1B420A9F5750062E6A1 /* CoreDataManager.swift in Sources */,
 				F44FC19C20A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift in Sources */,
 				F44FC1A220A9F1160062E6A1 /* LocationTypeMO+CoreDataProperties.swift in Sources */,
 				F44FC16B20A9E53D0062E6A1 /* ElementMO+CoreDataClass.swift in Sources */,
+				390A86D420B3368200615044 /* SelecteurFormeFeuilles.swift in Sources */,
 				F44FC17020A9E73A0062E6A1 /* NaturalsMO+CoreDataProperties.swift in Sources */,
 				F450C46320A442A9006DC7D2 /* RegionSelectionTableViewCell.swift in Sources */,
 				F450C46520A448DC006DC7D2 /* CategorySelectionViewController.swift in Sources */,
@@ -465,6 +524,7 @@
 				F44FC19920A9F1160062E6A1 /* CharacterMO+CoreDataClass.swift in Sources */,
 				F44FC1AF20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift in Sources */,
 				F44FC19B20A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift in Sources */,
+				390A86D620B3399300615044 /* SelecteurFlowerHeight.swift in Sources */,
 				F44FC19A20A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

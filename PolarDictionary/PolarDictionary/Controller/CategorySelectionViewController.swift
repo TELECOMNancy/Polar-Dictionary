@@ -13,7 +13,6 @@ class CategorySelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -33,13 +32,15 @@ class CategorySelectionViewController: UIViewController {
     }
     
     //MARK: Actions
-
+    
     @IBAction func showFauna(_ sender: UIButton) {
         let elementListController = storyboard?.instantiateViewController(withIdentifier: "ElementTableViewController") as! ElementTableViewController
+        /*
         let newElement1 = "chien"
         let newElement2 = "chat"
         elementListController.elementList.append(newElement1)
         elementListController.elementList.append(newElement2)
+        */
         navigationController?.pushViewController(elementListController, animated: true)
     }
     
