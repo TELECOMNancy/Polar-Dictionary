@@ -2,7 +2,7 @@
 //  LocationMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Syméon Carle on 22/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -17,11 +17,11 @@ extension LocationMO {
         return NSFetchRequest<LocationMO>(entityName: "Location")
     }
 
-    @NSManaged public var region: String?
     @NSManaged public var country: String?
+    @NSManaged public var region: String?
     @NSManaged public var flora: NSSet?
-    @NSManaged public var type: LocationTypeMO?
     @NSManaged public var pictures: NSSet?
+    @NSManaged public var type: LocationTypeMO?
 
 }
 

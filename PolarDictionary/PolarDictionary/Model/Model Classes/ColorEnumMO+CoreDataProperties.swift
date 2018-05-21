@@ -2,7 +2,7 @@
 //  ColorEnumMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Syméon Carle on 22/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -17,27 +17,10 @@ extension ColorEnumMO {
         return NSFetchRequest<ColorEnumMO>(entityName: "ColorEnum")
     }
 
-    @NSManaged public var birdColor: NSSet?
     @NSManaged public var beakColor: NSSet?
-    @NSManaged public var petalColors: NSSet?
+    @NSManaged public var birdColor: NSSet?
     @NSManaged public var legColor: NSSet?
-
-}
-
-// MARK: Generated accessors for birdColor
-extension ColorEnumMO {
-
-    @objc(addBirdColorObject:)
-    @NSManaged public func addToBirdColor(_ value: BirdMO)
-
-    @objc(removeBirdColorObject:)
-    @NSManaged public func removeFromBirdColor(_ value: BirdMO)
-
-    @objc(addBirdColor:)
-    @NSManaged public func addToBirdColor(_ values: NSSet)
-
-    @objc(removeBirdColor:)
-    @NSManaged public func removeFromBirdColor(_ values: NSSet)
+    @NSManaged public var petalColors: NSSet?
 
 }
 
@@ -58,20 +41,20 @@ extension ColorEnumMO {
 
 }
 
-// MARK: Generated accessors for petalColors
+// MARK: Generated accessors for birdColor
 extension ColorEnumMO {
 
-    @objc(addPetalColorsObject:)
-    @NSManaged public func addToPetalColors(_ value: FloraMO)
+    @objc(addBirdColorObject:)
+    @NSManaged public func addToBirdColor(_ value: BirdMO)
 
-    @objc(removePetalColorsObject:)
-    @NSManaged public func removeFromPetalColors(_ value: FloraMO)
+    @objc(removeBirdColorObject:)
+    @NSManaged public func removeFromBirdColor(_ value: BirdMO)
 
-    @objc(addPetalColors:)
-    @NSManaged public func addToPetalColors(_ values: NSSet)
+    @objc(addBirdColor:)
+    @NSManaged public func addToBirdColor(_ values: NSSet)
 
-    @objc(removePetalColors:)
-    @NSManaged public func removeFromPetalColors(_ values: NSSet)
+    @objc(removeBirdColor:)
+    @NSManaged public func removeFromBirdColor(_ values: NSSet)
 
 }
 
@@ -89,5 +72,22 @@ extension ColorEnumMO {
 
     @objc(removeLegColor:)
     @NSManaged public func removeFromLegColor(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for petalColors
+extension ColorEnumMO {
+
+    @objc(addPetalColorsObject:)
+    @NSManaged public func addToPetalColors(_ value: FloraMO)
+
+    @objc(removePetalColorsObject:)
+    @NSManaged public func removeFromPetalColors(_ value: FloraMO)
+
+    @objc(addPetalColors:)
+    @NSManaged public func addToPetalColors(_ values: NSSet)
+
+    @objc(removePetalColors:)
+    @NSManaged public func removeFromPetalColors(_ values: NSSet)
 
 }

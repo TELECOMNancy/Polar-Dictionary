@@ -2,7 +2,7 @@
 //  FloraTypeMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Syméon Carle on 22/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -21,19 +21,19 @@ extension FloraTypeMO {
 
 }
 
-// MARK: Generated accessors for flora
+// MARK: Generated accessors for floraType
 extension FloraTypeMO {
 
-    @objc(addFloraObject:)
-    @NSManaged public func addToFlora(_ value: FloraMO)
+    @objc(addFloraTypeObject:)
+    @NSManaged public func addToFloraType(_ value: FloraMO)
 
-    @objc(removeFloraObject:)
-    @NSManaged public func removeFromFlora(_ value: FloraMO)
+    @objc(removeFloraTypeObject:)
+    @NSManaged public func removeFromFloraType(_ value: FloraMO)
 
-    @objc(addFlora:)
-    @NSManaged public func addToFlora(_ values: NSSet)
+    @objc(addFloraType:)
+    @NSManaged public func addToFloraType(_ values: NSSet)
 
-    @objc(removeFlora:)
-    @NSManaged public func removeFromFlora(_ values: NSSet)
+    @objc(removeFloraType:)
+    @NSManaged public func removeFromFloraType(_ values: NSSet)
 
 }

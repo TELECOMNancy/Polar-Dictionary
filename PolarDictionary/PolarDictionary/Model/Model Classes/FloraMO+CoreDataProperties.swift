@@ -2,7 +2,7 @@
 //  FloraMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 21/05/2018.
+//  Created by Syméon Carle on 22/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -17,10 +17,10 @@ extension FloraMO {
         return NSFetchRequest<FloraMO>(entityName: "Flora")
     }
 
+    @NSManaged public var countries: String?
     @NSManaged public var nbPetals: String?
     @NSManaged public var nbStamens: Int32
     @NSManaged public var realHeight: String?
-    @NSManaged public var countries: String?
     @NSManaged public var floraType: FloraTypeMO?
     @NSManaged public var height: FlowerHeightMO?
     @NSManaged public var leavesShape: LeavesShapeMO?

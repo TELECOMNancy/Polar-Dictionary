@@ -1,5 +1,5 @@
 //
-//  LocationTypeMO+CoreDataClass.swift
+//  MarineMammalsMO+CoreDataClass.swift
 //  PolarDictionary
 //
 //  Created by Syméon Carle on 22/05/2018.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(LocationTypeMO)
-public class LocationTypeMO: EnumerationMO {
+@objc(MarineMammalsMO)
+public class MarineMammalsMO: FaunaMO {
 
 }

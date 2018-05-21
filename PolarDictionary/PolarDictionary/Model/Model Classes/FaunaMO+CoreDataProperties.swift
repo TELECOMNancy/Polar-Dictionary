@@ -2,7 +2,7 @@
 //  FaunaMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Syméon Carle on 22/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -17,8 +17,8 @@ extension FaunaMO {
         return NSFetchRequest<FaunaMO>(entityName: "Fauna")
     }
 
-    @NSManaged public var size: Float
     @NSManaged public var femaleWeight: Float
     @NSManaged public var maleWeight: Float
+    @NSManaged public var size: Float
 
 }

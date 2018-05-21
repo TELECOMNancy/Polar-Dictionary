@@ -2,7 +2,7 @@
 //  NaturalsMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Syméon Carle on 22/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -17,9 +17,9 @@ extension NaturalsMO {
         return NSFetchRequest<NaturalsMO>(entityName: "Naturals")
     }
 
-    @NSManaged public var frenchName: String?
     @NSManaged public var englishName: String?
-    @NSManaged public var latinName: String?
     @NSManaged public var family: String?
+    @NSManaged public var frenchName: String?
+    @NSManaged public var latinName: String?
 
 }
