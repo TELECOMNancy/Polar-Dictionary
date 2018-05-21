@@ -237,20 +237,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         floraItem.floraType = findFloraType(floraType: item.type)
                     }
                     floraItem.family = item.family
-                    /*
-                    floraItem.length = item.length
-                    floraItem.nbPetals = Int(item.nbPetals)
-                    petalColors
-                    nbSepals
-                    nbStamens
-                    stamens
-                    fruit
-                    stem
-                    leaves
-                    description
-                    webLink
-                    floraItem.location = item.country
-                    */
+                    
+                    //floraItem.length = item.length
+                    //floraItem.nbPetals = Int(item.nbPetals)
+                    //petalColors
+                    //nbSepals
+                    //nbStamens
+                    //stamens
+                    //fruit
+                    //stem
+                    //leaves
+                    print("NEW")
+                    print(item.frenchName)
+                    print(item.description)
+                    if(item.description != ""){
+                        floraItem.description_ = item.description
+                    }
+                    //webLink
+                    //floraItem.location = item.country
 
                     
                     do {

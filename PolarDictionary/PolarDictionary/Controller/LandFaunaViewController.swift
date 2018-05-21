@@ -47,8 +47,9 @@ class LandFaunaViewController: UIViewController {
         
         if(data?.family != ""){familyLabel.text = "Famille des " + (data?.family)!} else{familyLabel.text = "Famille inconnue"}
         
-        if(data?.description != ""){descriptionLabel.text = data?.description} else{descriptionLabel.text = "Aucune description"}
-        //descriptionLabel.text = data?.description_
+        if(data?.description != ""){descriptionLabel.text = data?.description_} else{descriptionLabel.text = "Aucune description"}
+        
+        
         
         //webLinkButton.truc = landFauna?.webLink
         //TODO: self.landFauna.loadInfo()
