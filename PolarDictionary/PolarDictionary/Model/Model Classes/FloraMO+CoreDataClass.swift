@@ -2,7 +2,7 @@
 //  FloraMO+CoreDataClass.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Anissa Bokhamy on 21/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //

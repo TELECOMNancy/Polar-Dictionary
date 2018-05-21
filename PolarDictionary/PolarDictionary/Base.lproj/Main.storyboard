@@ -301,12 +301,15 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToWebLink:" destination="xss-sb-qWa" eventType="touchUpInside" id="k05-lh-2jY"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aucune description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-u8-QEo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aucune description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYO-u8-QEo">
                                 <rect key="frame" x="33" y="321" width="308" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.042442768812179565" green="0.39374583959579468" blue="0.45322942733764648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="arbuste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXa-Q4-8KZ">
@@ -337,8 +340,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="non indiqué" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCL-o0-tiv">
-                                <rect key="frame" x="113" y="537" width="149" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="non indiqué" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCL-o0-tiv">
+                                <rect key="frame" x="16" y="537" width="343" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -375,12 +378,14 @@
                         <outlet property="familyLabel" destination="KG3-4B-mex" id="afa-vv-Pir"/>
                         <outlet property="frenchNameLabel" destination="vTt-SC-rs8" id="3o1-2n-pSi"/>
                         <outlet property="fruitLabel" destination="pys-II-bDI" id="JBc-ZH-2sR"/>
+                        <outlet property="heightLabel" destination="Ika-Ee-Q7t" id="pJf-Me-BNV"/>
                         <outlet property="image" destination="bL0-PI-kK0" id="8CO-dj-i84"/>
                         <outlet property="latinLabel" destination="JG3-hp-h2Q" id="Ed4-Xv-MI7"/>
                         <outlet property="locationLabel" destination="SCL-o0-tiv" id="8F5-GO-9s1"/>
                         <outlet property="sepalsPetalsLabel" destination="DPT-sB-i6s" id="mZo-dM-5Jj"/>
                         <outlet property="stemLabel" destination="BHs-jF-aHw" id="MqO-Ia-yux"/>
                         <outlet property="typeLabel" destination="BXa-Q4-8KZ" id="G1T-83-Slj"/>
+                        <outlet property="webLinkButton" destination="uSm-td-ElL" id="vU4-Jg-OzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOj-ps-Alz" userLabel="First Responder" sceneMemberID="firstResponder"/>

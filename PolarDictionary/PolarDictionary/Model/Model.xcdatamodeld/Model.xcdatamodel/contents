@@ -36,8 +36,10 @@
         <attribute name="size" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Flora" representedClassName="FloraMO" parentEntity="Naturals" syncable="YES">
-        <attribute name="nbPetals" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="countries" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nbPetals" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nbStamens" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="realHeight" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="floraType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FloraType" inverseName="floraType" inverseEntity="FloraType" syncable="YES"/>
         <relationship name="height" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlowerHeight" inverseName="flora" inverseEntity="FlowerHeight" syncable="YES"/>
         <relationship name="leavesShape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LeavesShape" inverseName="flora" inverseEntity="LeavesShape" syncable="YES"/>
@@ -86,7 +88,7 @@
         <element name="Element" positionX="-45" positionY="0" width="128" height="90"/>
         <element name="Enumeration" positionX="45" positionY="153" width="128" height="60"/>
         <element name="Fauna" positionX="9" positionY="90" width="128" height="90"/>
-        <element name="Flora" positionX="18" positionY="117" width="128" height="150"/>
+        <element name="Flora" positionX="18" positionY="117" width="128" height="180"/>
         <element name="FloraType" positionX="27" positionY="126" width="128" height="60"/>
         <element name="FlowerHeight" positionX="45" positionY="153" width="128" height="60"/>
         <element name="LandFauna" positionX="27" positionY="117" width="128" height="45"/>
