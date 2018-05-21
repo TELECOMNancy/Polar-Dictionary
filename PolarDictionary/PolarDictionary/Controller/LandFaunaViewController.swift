@@ -30,9 +30,10 @@ class LandFaunaViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var sepalsPetalsLabel: UILabel!
     @IBOutlet weak var stemLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var fruitLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    
+    @IBOutlet weak var webLinkButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -49,8 +50,46 @@ class LandFaunaViewController: UIViewController {
         
         if(data?.description != ""){descriptionLabel.text = data?.description_} else{descriptionLabel.text = "Aucune description"}
         
+        sepalsPetalsLabel.text = ""
+        if(data?.nbStamens != -1 && data?.nbStamens == 1000){
+            sepalsPetalsLabel.text?.append("nombreuses étamines")
+        }
+        else if (data?.nbStamens != -1 ){
+            sepalsPetalsLabel.text?.append("\(data?.nbStamens ?? 0) étamines")
+        }
+        if(data?.nbPetals != ""){
+            if(sepalsPetalsLabel.text != ""){
+                sepalsPetalsLabel.text?.append(" - ")
+            }
+            
+                sepalsPetalsLabel.text?.append((data?.nbPetals)! + " pétales")
+        }
         
+        /*if(data?.petalColors?.count != 0){
+         if(sepalsPetalsLabel.text?.contains("pétales"))!{
+         sepalsPetalsLabel.text?.append((data?.petalColors![0]))
+         }
+         sepalsPetalsLabel.text?.append(" pétales " + (data?.petalColors![0]))
+         }*/
         
+        if(data?.realHeight != ""){
+            heightLabel.text = data?.realHeight
+        }
+        else{
+            heightLabel.text = "Aucune information"
+        }
+        
+        if(data?.countries != ""){
+            locationLabel.text = data?.countries
+        }
+        else{
+            locationLabel.text = "Aucune information"
+        }
+        
+        if(data?.webLink == ""){
+            webLinkButton.isHidden = true
+        }
+
         //webLinkButton.truc = landFauna?.webLink
         //TODO: self.landFauna.loadInfo()
         //latinNameLabel.text = landFauna?.latinLabel etc...*/
@@ -70,7 +109,14 @@ class LandFaunaViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+     }
+     */
+    @IBAction func goToWebLink(_ sender: UIButton) {
+        if let url = URL(string: (data?.webLink)!) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
-    */
+    
+ 
 
 }

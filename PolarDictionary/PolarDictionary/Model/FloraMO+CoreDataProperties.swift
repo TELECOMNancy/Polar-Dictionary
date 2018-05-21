@@ -2,7 +2,7 @@
 //  FloraMO+CoreDataProperties.swift
 //  PolarDictionary
 //
-//  Created by Anissa Bokhamy on 14/05/2018.
+//  Created by Anissa Bokhamy on 21/05/2018.
 //  Copyright © 2018 PIDR. All rights reserved.
 //
 //
@@ -17,30 +17,15 @@ extension FloraMO {
         return NSFetchRequest<FloraMO>(entityName: "Flora")
     }
 
-    @NSManaged public var nbPetals: Int32
+    @NSManaged public var nbPetals: String?
     @NSManaged public var nbStamens: Int32
-    @NSManaged public var petalColors: NSSet?
+    @NSManaged public var realHeight: String?
+    @NSManaged public var countries: String?
     @NSManaged public var floraType: FloraTypeMO?
-    @NSManaged public var leavesShape: LeavesShapeMO?
     @NSManaged public var height: FlowerHeightMO?
+    @NSManaged public var leavesShape: LeavesShapeMO?
     @NSManaged public var location: NSSet?
-
-}
-
-// MARK: Generated accessors for petalColors
-extension FloraMO {
-
-    @objc(addPetalColorsObject:)
-    @NSManaged public func addToPetalColors(_ value: ColorEnumMO)
-
-    @objc(removePetalColorsObject:)
-    @NSManaged public func removeFromPetalColors(_ value: ColorEnumMO)
-
-    @objc(addPetalColors:)
-    @NSManaged public func addToPetalColors(_ values: NSSet)
-
-    @objc(removePetalColors:)
-    @NSManaged public func removeFromPetalColors(_ values: NSSet)
+    @NSManaged public var petalColors: NSSet?
 
 }
 
@@ -58,5 +43,22 @@ extension FloraMO {
 
     @objc(removeLocation:)
     @NSManaged public func removeFromLocation(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for petalColors
+extension FloraMO {
+
+    @objc(addPetalColorsObject:)
+    @NSManaged public func addToPetalColors(_ value: ColorEnumMO)
+
+    @objc(removePetalColorsObject:)
+    @NSManaged public func removeFromPetalColors(_ value: ColorEnumMO)
+
+    @objc(addPetalColors:)
+    @NSManaged public func addToPetalColors(_ values: NSSet)
+
+    @objc(removePetalColors:)
+    @NSManaged public func removeFromPetalColors(_ values: NSSet)
 
 }

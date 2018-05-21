@@ -198,7 +198,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             values = line.components(separatedBy:delimiter)
                         }
                         // Put the values into the tuple and add it to the items array
-                        let item = (frenchName: values[0], englishName: values[1], latinName: values[2], type: values[3], family: values[4], length: values[5], nbPetals: values[7], petalColors: values[8], nbSepals: values[9], nbStamens: values[10], stamens: values[11], fruit: values[12], stem: values[13], leaves: values[14], description: values[15], webLink: values[16],country: values[17])
+                        let item = (frenchName: values[0], englishName: values[1], latinName: values[2], type: values[3], family: values[4], length: values[6], nbPetals: values[7], petalColors: values[8], nbSepals: values[9], nbStamens: values[10], stamens: values[11], fruit: values[12], stem: values[13], leaves: values[14], description: values[15], webLink: values[16],country: values[17])
                         items?.append(item)
                     }
                 lineNumber = lineNumber + 1
@@ -238,22 +238,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                     floraItem.family = item.family
                     
-                    //floraItem.length = item.length
-                    //floraItem.nbPetals = Int(item.nbPetals)
+                    floraItem.realHeight = item.length
+                    floraItem.nbPetals = item.nbPetals
                     //petalColors
                     //nbSepals
-                    //nbStamens
+                    if(item.nbStamens == "nombreuses"){
+                        floraItem.nbStamens = 1000
+                    }
+                    else if(item.nbStamens != ""){
+                        floraItem.nbStamens = Int32(item.nbStamens)!
+                    }
                     //stamens
                     //fruit
                     //stem
                     //leaves
-                    print("NEW")
-                    print(item.frenchName)
-                    print(item.description)
                     if(item.description != ""){
                         floraItem.description_ = item.description
                     }
-                    //webLink
+                    floraItem.webLink = item.webLink
+                    floraItem.countries = item.country
+                    /*let countries = item.country.split(separator: ",")
+                    //TODO
+                    for country in countries{
+                        addCountryToLocation(item: floraItem, country: String(country))
+                    }*/
                     //floraItem.location = item.country
 
                     
@@ -345,6 +353,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         assert((colors?.count)! == 1)
         return colors![0]
     }
+    
+    /*func addCountryToLocation(item : FloraMO,country : String){
+        let managedObjectContext = self.managedObjectContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Location")
+        fetchRequest.predicate = NSPredicate(format:"ANY country LIKE[c] %@",country)
+        let locations = try? managedObjectContext.fetch(fetchRequest) as! [LocationMO]
+        if(locations?.count == 0){ //if no location with this name of country exists
+            let newLocation = NSEntityDescription.insertNewObject(forEntityName: "Location", into: managedObjectContext) as! LocationMO
+            newLocation.country = country
+            do {
+                try managedObjectContext.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+            item.addToLocation(newLocation)
+        }
+        else{
+            for location in locations!{
+                item.addToLocation(location)
+            }
+        }
+        
+    }*/
 
 
 }

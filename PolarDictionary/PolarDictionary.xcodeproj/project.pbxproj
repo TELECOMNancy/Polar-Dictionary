@@ -35,8 +35,6 @@
 		F44FC19A20A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */; };
 		F44FC19B20A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */; };
 		F44FC19C20A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */; };
-		F44FC19D20A9F1160062E6A1 /* FloraMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */; };
-		F44FC19E20A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */; };
 		F44FC19F20A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */; };
 		F44FC1A020A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */; };
 		F44FC1A120A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */; };
@@ -65,6 +63,8 @@
 		F450C46920A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46820A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift */; };
 		F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */; };
 		F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */; };
+		F4A584A620B36F2B00FCDEE3 /* FloraMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A584A420B36F2B00FCDEE3 /* FloraMO+CoreDataClass.swift */; };
+		F4A584A720B36F2B00FCDEE3 /* FloraMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A584A520B36F2B00FCDEE3 /* FloraMO+CoreDataProperties.swift */; };
 		F4F1F3D020AC4E89001A6A95 /* Plantes.csv in Resources */ = {isa = PBXBuildFile; fileRef = F4F1F3CE20AC4E2F001A6A95 /* Plantes.csv */; };
 		F4F1F3D520ADCC62001A6A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -115,8 +115,6 @@
 		F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraTypeMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraTypeMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowerHeightMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlowerHeightMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationTypeMO+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -151,6 +149,8 @@
 		F450C46820A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaTableViewCell.swift; sourceTree = "<group>"; };
 		F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaViewController.swift; sourceTree = "<group>"; };
 		F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingElementsTableViewController.swift; sourceTree = "<group>"; };
+		F4A584A420B36F2B00FCDEE3 /* FloraMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F4A584A520B36F2B00FCDEE3 /* FloraMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloraMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4F1F3CE20AC4E2F001A6A95 /* Plantes.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Plantes.csv; path = PolarDictionary/res/Plantes.csv; sourceTree = "<group>"; };
 		F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PolarDictionary/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -257,8 +257,8 @@
 				F450C45A20A43C7A006DC7D2 /* Model */,
 				F450C42920A43C66006DC7D2 /* AppDelegate.swift */,
 				F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */,
-				F450C42B20A43C66006DC7D2 /* ViewController.swift */,
 				F450C42D20A43C66006DC7D2 /* Main.storyboard */,
+				F450C42B20A43C66006DC7D2 /* ViewController.swift */,
 				F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */,
 				F450C43820A43C67006DC7D2 /* Info.plist */,
 			);
@@ -286,6 +286,8 @@
 		F450C45A20A43C7A006DC7D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F4A584A420B36F2B00FCDEE3 /* FloraMO+CoreDataClass.swift */,
+				F4A584A520B36F2B00FCDEE3 /* FloraMO+CoreDataProperties.swift */,
 				F44FC1AD20A9F15F0062E6A1 /* ColorEnumMO+CoreDataClass.swift */,
 				F44FC1AE20A9F15F0062E6A1 /* ColorEnumMO+CoreDataProperties.swift */,
 				F44FC17920A9F1160062E6A1 /* PictureMO+CoreDataClass.swift */,
@@ -298,8 +300,6 @@
 				F44FC18020A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift */,
 				F44FC18120A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift */,
 				F44FC18220A9F1160062E6A1 /* FloraTypeMO+CoreDataProperties.swift */,
-				F44FC18320A9F1160062E6A1 /* FloraMO+CoreDataClass.swift */,
-				F44FC18420A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift */,
 				F44FC18520A9F1160062E6A1 /* FlowerHeightMO+CoreDataClass.swift */,
 				F44FC18620A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift */,
 				F44FC18720A9F1160062E6A1 /* LocationTypeMO+CoreDataClass.swift */,
@@ -472,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A584A720B36F2B00FCDEE3 /* FloraMO+CoreDataProperties.swift in Sources */,
 				F44FC19520A9F1160062E6A1 /* EnumerationMO+CoreDataClass.swift in Sources */,
 				F44FC1A020A9F1160062E6A1 /* FlowerHeightMO+CoreDataProperties.swift in Sources */,
 				F44FC1A520A9F1160062E6A1 /* LocationMO+CoreDataClass.swift in Sources */,
@@ -490,10 +491,8 @@
 				F44FC19420A9F1160062E6A1 /* PictureMO+CoreDataProperties.swift in Sources */,
 				F44FC1A620A9F1160062E6A1 /* LocationMO+CoreDataProperties.swift in Sources */,
 				F450C42C20A43C66006DC7D2 /* ViewController.swift in Sources */,
-				F44FC19D20A9F1160062E6A1 /* FloraMO+CoreDataClass.swift in Sources */,
 				F44FC1A820A9F1160062E6A1 /* LeavesShapeMO+CoreDataProperties.swift in Sources */,
 				F44FC1AA20A9F1160062E6A1 /* LandFaunaMO+CoreDataProperties.swift in Sources */,
-				F44FC19E20A9F1160062E6A1 /* FloraMO+CoreDataProperties.swift in Sources */,
 				F44FC19720A9F1160062E6A1 /* BirdMO+CoreDataClass.swift in Sources */,
 				F450C45F20A43D98006DC7D2 /* RegionSelectionTableViewController.swift in Sources */,
 				F450C42A20A43C66006DC7D2 /* AppDelegate.swift in Sources */,
@@ -526,6 +525,7 @@
 				F44FC19B20A9F1160062E6A1 /* FloraTypeMO+CoreDataClass.swift in Sources */,
 				390A86D620B3399300615044 /* SelecteurFlowerHeight.swift in Sources */,
 				F44FC19A20A9F1160062E6A1 /* CharacterMO+CoreDataProperties.swift in Sources */,
+				F4A584A620B36F2B00FCDEE3 /* FloraMO+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
