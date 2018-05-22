@@ -65,8 +65,9 @@
 		F450C46920A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46820A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift */; };
 		F450C46B20A4C86C006DC7D2 /* LandFaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */; };
 		F450C47320A5AC22006DC7D2 /* SortingElementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */; };
+		F493D38820B393CB003D30B5 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493D38720B393CB003D30B5 /* CreationViewController.swift */; };
+		F493D38A20B396FF003D30B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F493D38920B396FF003D30B5 /* Assets.xcassets */; };
 		F4F1F3D020AC4E89001A6A95 /* Plantes.csv in Resources */ = {isa = PBXBuildFile; fileRef = F4F1F3CE20AC4E2F001A6A95 /* Plantes.csv */; };
-		F4F1F3D520ADCC62001A6A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,8 +152,9 @@
 		F450C46820A4A0D9006DC7D2 /* LandFaunaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaTableViewCell.swift; sourceTree = "<group>"; };
 		F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandFaunaViewController.swift; sourceTree = "<group>"; };
 		F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingElementsTableViewController.swift; sourceTree = "<group>"; };
+		F493D38720B393CB003D30B5 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
+		F493D38920B396FF003D30B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4F1F3CE20AC4E2F001A6A95 /* Plantes.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = Plantes.csv; path = PolarDictionary/res/Plantes.csv; sourceTree = "<group>"; };
-		F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PolarDictionary/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,13 +254,6 @@
 			path = "Model Classes";
 			sourceTree = "<group>";
 		};
-		39E23E1420B37FC6000363B6 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		F44FC1B120A9F3C10062E6A1 /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,7 +277,6 @@
 				F450C44020A43C67006DC7D2 /* PolarDictionaryTests */,
 				F450C44B20A43C67006DC7D2 /* PolarDictionaryUITests */,
 				F450C42720A43C66006DC7D2 /* Products */,
-				39E23E1420B37FC6000363B6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,7 +299,7 @@
 				F450C45B20A43C80006DC7D2 /* Controller */,
 				F450C45A20A43C7A006DC7D2 /* Model */,
 				F450C42920A43C66006DC7D2 /* AppDelegate.swift */,
-				F4F1F3D420ADCC62001A6A95 /* Assets.xcassets */,
+				F493D38920B396FF003D30B5 /* Assets.xcassets */,
 				F450C42D20A43C66006DC7D2 /* Main.storyboard */,
 				F450C42B20A43C66006DC7D2 /* ViewController.swift */,
 				F450C43520A43C67006DC7D2 /* LaunchScreen.storyboard */,
@@ -345,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				F450C45E20A43D98006DC7D2 /* RegionSelectionTableViewController.swift */,
+				F493D38720B393CB003D30B5 /* CreationViewController.swift */,
 				F450C47220A5AC22006DC7D2 /* SortingElementsTableViewController.swift */,
 				F450C46A20A4C86C006DC7D2 /* LandFaunaViewController.swift */,
 				F450C46420A448DC006DC7D2 /* CategorySelectionViewController.swift */,
@@ -462,7 +457,7 @@
 			files = (
 				F4F1F3D020AC4E89001A6A95 /* Plantes.csv in Resources */,
 				F450C43720A43C67006DC7D2 /* LaunchScreen.storyboard in Resources */,
-				F4F1F3D520ADCC62001A6A95 /* Assets.xcassets in Resources */,
+				F493D38A20B396FF003D30B5 /* Assets.xcassets in Resources */,
 				F450C42F20A43C66006DC7D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +533,7 @@
 				F450C46320A442A9006DC7D2 /* RegionSelectionTableViewCell.swift in Sources */,
 				F450C46520A448DC006DC7D2 /* CategorySelectionViewController.swift in Sources */,
 				39E23E9420B383C0000363B6 /* LocationTypeMO+CoreDataProperties.swift in Sources */,
+				F493D38820B393CB003D30B5 /* CreationViewController.swift in Sources */,
 				39E23E8A20B383C0000363B6 /* BirdMO+CoreDataProperties.swift in Sources */,
 				39E23E9020B383C0000363B6 /* ColorEnumMO+CoreDataProperties.swift in Sources */,
 				39E23E9620B383C0000363B6 /* MarineMammalsMO+CoreDataProperties.swift in Sources */,

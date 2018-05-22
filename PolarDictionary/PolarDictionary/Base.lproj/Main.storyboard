@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,7 +78,7 @@
                                 <rect key="frame" x="58" y="110" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.69268947839736938" green="0.76762384176254272" blue="0.83432525396347046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Faune">
+                                <state key="normal" title="Flora">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -106,7 +107,7 @@
                                 <rect key="frame" x="58" y="264" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.69268947839736938" green="0.76762384176254272" blue="0.83432525396347046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Flore">
+                                <state key="normal" title="Fauna">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -227,11 +228,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Éléments trouvés" id="Bzh-Yc-vaK">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="UWi-bI-LXM">
-                            <connections>
-                                <segue destination="Z5Y-ye-KpW" kind="show" identifier="toSearch" id="X4b-JD-Afj"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="search" id="UWi-bI-LXM">
+                                <connections>
+                                    <segue destination="Z5Y-ye-KpW" kind="show" identifier="toSearch" id="X4b-JD-Afj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="PU0-Ti-61d">
+                                <connections>
+                                    <segue destination="3gE-XE-VwR" kind="show" identifier="addElement" id="yQm-3W-cgY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -239,6 +247,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAU-Gt-Pmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4020" y="133"/>
+        </scene>
+        <!--Ajouter-->
+        <scene sceneID="8Vt-pO-y34">
+            <objects>
+                <viewController id="3gE-XE-VwR" customClass="CreationViewController" customModule="PolarDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUv-fh-j2J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrer le nom de la fleur" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YrE-aq-bON">
+                                <rect key="frame" x="26" y="93" width="323" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrer son nom latin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCK-uN-z2A">
+                                <rect key="frame" x="50" y="131" width="299" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="DVy-i0-dm4">
+                                <rect key="frame" x="33" y="169" width="308" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CTl-5u-C7N" appends="YES" id="DZM-9i-mqL"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agK-Pi-R3l">
+                                <rect key="frame" x="33" y="406" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.081124551594257355" green="0.3937227725982666" blue="0.45317262411117554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVa-qp-w48" customClass="SelecteurFloraType" customModule="PolarDictionary" customModuleProvider="target">
+                                <rect key="frame" x="92" y="375" width="257" height="82"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrer la famille de la fleur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoW-ZM-7Hg">
+                                <rect key="frame" x="26" y="337" width="323" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZRU-Sq-ZsA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ajouter" id="qap-76-1B3">
+                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="0Hh-cy-N1C">
+                            <connections>
+                                <segue destination="Wlz-A7-w2m" kind="unwind" unwindAction="unwindFromCreation:" id="uGz-bc-jMl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="familyTextField" destination="FoW-ZM-7Hg" id="sp0-b5-I3p"/>
+                        <outlet property="latinNameTextField" destination="RCK-uN-z2A" id="9WP-Gn-Dft"/>
+                        <outlet property="nameTextField" destination="YrE-aq-bON" id="cxZ-qR-3xg"/>
+                        <outlet property="picture" destination="DVy-i0-dm4" id="6ic-Bd-ZsE"/>
+                        <outlet property="saveButton" destination="0Hh-cy-N1C" id="v9i-Fw-4tN"/>
+                        <outlet property="typeSelector" destination="AVa-qp-w48" id="DYN-Dh-ZQh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOA-ym-eKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Wlz-A7-w2m" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="CTl-5u-C7N">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="3gE-XE-VwR" id="aC4-Dc-ChA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4020" y="1105.9970014992505"/>
         </scene>
         <!--Flore-->
         <scene sceneID="KQi-MS-pXK">
@@ -1095,7 +1181,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD6-qb-mom" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="DGX-Pa-mBG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4822" y="133"/>
+            <point key="canvasLocation" x="5174" y="105"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V8h-YU-n1x">
@@ -1286,4 +1372,7 @@
             <point key="canvasLocation" x="9842.3999999999996" y="1526.9865067466269"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Default" width="288" height="138"/>
+    </resources>
 </document>

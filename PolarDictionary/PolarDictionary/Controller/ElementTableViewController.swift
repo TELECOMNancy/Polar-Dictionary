@@ -145,6 +145,15 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
         }
         
     }
+    
+    @IBAction func unwindFromCreation(_ sender: UIStoryboardSegue) {
+        if sender.source is CreationViewController {
+            if let senderVC = sender.source as? CreationViewController {
+                self.fetchedResultsController = initializeFetchedResultsController(request: senderVC.request)
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -166,6 +175,8 @@ class ElementTableViewController: UITableViewController, NSFetchedResultsControl
             
             landFaunaDetailViewController.data = self.fetchedResultsController.object(at: indexPath)
         case "toSearch":
+            break
+        case "addElement":
             break
         default:
             fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
